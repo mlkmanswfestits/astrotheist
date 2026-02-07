@@ -1,0 +1,4 @@
+SEO Audit Report
+================
+
+All pages have Title, Meta Description, and H1.

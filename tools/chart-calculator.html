@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Natal Chart Calculator - AstroTheist</title>
+    <meta name="description"
+        content="Generate your free natal chart using Swiss Ephemeris. Enter birth data and explore your cosmic blueprint."
+    <link rel="canonical" href="https://astrotheist.com/tools/chart-calculator.html">
+    <meta property="og:title" content="Free Natal Chart Calculator - AstroTheist">
+    <meta property="og:description" content="Generate your free natal chart using Swiss Ephemeris. Enter birth data and explore your cosmic blueprint.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://astrotheist.com/tools/chart-calculator.html">
+    <meta property="og:image" content="https://astrotheist.com/images/og-main.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Free Natal Chart Calculator - AstroTheist">
+    <meta name="twitter:description" content="Generate your free natal chart using Swiss Ephemeris. Enter birth data and explore your cosmic blueprint.">
+    <meta name="twitter:image" content="https://astrotheist.com/images/og-main.jpg">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    	
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="../styles.css">
+	<link rel="stylesheet" href="../order-form.css">
+</head>
+
+<body>
+                                                                                                                <nav class="astro-navbar">
+        <div class="astro-container astro-nav-container">
+            <a href="../index.html" class="astro-logo">
+                <svg class="astro-logo-icon" viewBox="0 0 100 60" width="100" height="60">
+                    <circle cx="25" cy="40" r="1.5" fill="currentColor" />
+                    <circle cx="45" cy="35" r="1.5" fill="currentColor" />
+                    <circle cx="65" cy="20" r="2.5" fill="currentColor" />
+                    <circle cx="85" cy="30" r="1.5" fill="currentColor" />
+                    <circle cx="35" cy="50" r="1.5" fill="currentColor" />
+                    <path d="M25 40 L45 35 L65 20 L85 30 M45 35 L35 50" stroke="currentColor" stroke-width="0.5" fill="none" opacity="0.6" />
+                    <path d="M65 20 L65 10 M60 20 L70 20" stroke="currentColor" stroke-width="0.5" fill="none" />
+                </svg>
+                <span class="astro-logo-text">astrotheist</span>
+            </a>
+            <button class="astro-mobile-menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="astro-nav-menu">
+    <li class="astro-nav-item astro-dropdown">
+        <a href="#" class="astro-nav-link">Learn</a>
+        <div class="astro-dropdown-menu astro-dropdown-mega">
+            <div class="astro-dropdown-column">
+                <h4>Core Wisdom</h4>
+                <a href="../learn/planets/index.html">The Planets</a>
+                <a href="../learn/houses/index.html">The Houses</a>
+                <a href="../learn/signs/index.html">The Signs</a>
+                <a href="../learn/angles/index.html">Angles & Points</a>
+                <a href="../learn/patterns/index.html">Patterns</a>
+                <a href="../learn/aspects/index.html">Aspects</a>
+                <a href="../learn/aspects/natal/index.html">Planetary Aspects</a>
+                <a href="../learn/critical-degrees/index.html">Critical Degrees</a>
+            </div>
+            <div class="astro-dropdown-column">
+                <h4>Planets in Signs</h4>
+                <a href="../learn/planets/in-signs/sun/aries.html">Sun in Signs</a>
+                <a href="../learn/planets/in-signs/moon/aries.html">Moon in Signs</a>
+                <a href="../learn/planets/in-signs/mercury/aries.html">Mercury in Signs</a>
+                <a href="../learn/planets/in-signs/venus/aries.html">Venus in Signs</a>
+                <a href="../learn/planets/in-signs/mars/aries.html">Mars in Signs</a>
+                <a href="../learn/planets/in-signs/jupiter/aries.html">Jupiter in Signs</a>
+                <a href="../learn/planets/in-signs/saturn/aries.html">Saturn in Signs</a>
+            </div>
+            <div class="astro-dropdown-column">
+                <h4>Planets in Houses</h4>
+                <a href="../learn/planets/in-houses/sun/house1.html">Sun in Houses</a>
+                <a href="../learn/planets/in-houses/moon/house1.html">Moon in Houses</a>
+                <a href="../learn/planets/in-houses/mercury/house1.html">Mercury in Houses</a>
+                <a href="../learn/planets/in-houses/venus/house1.html">Venus in Houses</a>
+                <a href="../learn/planets/in-houses/mars/house1.html">Mars in Houses</a>
+                <a href="../learn/planets/in-houses/jupiter/house1.html">Jupiter in Houses</a>
+                <a href="../learn/planets/in-houses/saturn/house1.html">Saturn in Houses</a>
+            </div>
+            <div class="astro-dropdown-column">
+                <h4>Specialized</h4>
+                <a href="../learn/houses/index.html">Signs in Houses</a>
+                <a href="chart-calculator.html">Free Natal Chart</a>
+                <a href="horoscopes.html">Horoscopes</a>
+                <a href="synastry.html">Synastry Calculator</a>
+                <hr style="border: 0; border-top: 1px solid rgba(197,160,89,0.1); margin: 10px 0;">
+                <a href="../store/index.html" style="color: var(--gold-light);">Personalized Reports</a>
+            </div>
+        </div>
+    </li>
+    <li class="astro-nav-item astro-dropdown">
+        <a href="../learn/birthdays/index.html" class="astro-nav-link">Birthdays</a>
+        <div class="astro-dropdown-menu">
+            <a href="../learn/birthdays/january.html">January</a>
+            <a href="../learn/birthdays/february.html">February</a>
+            <a href="../learn/birthdays/march.html">March</a>
+            <a href="../learn/birthdays/april.html">April</a>
+            <a href="../learn/birthdays/may.html">May</a>
+            <a href="../learn/birthdays/june.html">June</a>
+            <a href="../learn/birthdays/july.html">July</a>
+            <a href="../learn/birthdays/august.html">August</a>
+            <a href="../learn/birthdays/september.html">September</a>
+            <a href="../learn/birthdays/october.html">October</a>
+            <a href="../learn/birthdays/november.html">November</a>
+            <a href="../learn/birthdays/december.html">December</a>
+        </div>
+    </li>
+    <li class="astro-nav-item astro-dropdown">
+        <a href="#" class="astro-nav-link">Reports</a>
+        <div class="astro-dropdown-menu">
+            <a href="chart-calculator.html">Free Natal Chart</a>
+            <a href="horoscopes.html">Horoscopes</a>
+            <a href="synastry.html">Synastry Calculator</a>
+            <hr style="border: 0; border-top: 1px solid rgba(197,160,89,0.1); margin: 10px 0;">
+            <a href="../services/natal-report.html">Natal Report</a>
+            <a href="../services/synastry-report.html">Synastry Report</a>
+            <a href="../services/healing.html">Healing Sessions</a>
+            <a href="../services/consultation.html">1-on-1 Consultation</a>
+            <a href="../services/birthday.html">Birthday Interpretation</a>
+        </div>
+    </li>
+    <li class="astro-nav-item astro-dropdown">
+        <a href="#" class="astro-nav-link">Reference</a>
+        <div class="astro-dropdown-menu">
+            <a href="../reference/transits.html">Major Transits</a>
+            <a href="../reference/resources.html">Resources</a>
+        </div>
+    </li>
+    <li class="astro-nav-item"><a href="../blog/index.html" class="astro-nav-link">Blog</a></li>
+    <li class="astro-nav-item"><a href="../about.html" class="astro-nav-link">About</a></li>
+    <li class="astro-nav-item"><a href="../store/index.html" class="astro-nav-link">Store</a></li>
+    <li class="astro-nav-item"><a href="../community/index.html" class="astro-nav-link">Community</a></li>
+</ul>
+        </div>
+    </nav>
+
+    <section class="hero" style="min-height: 40vh;">
+        <div class="hero-background"></div>
+        <div class="astro-container hero-content">
+            <h1 class="hero-title">Free Natal Chart</h1>
+            <p class="hero-subtitle">Professional Astrological Calculations</p>
+        </div>
+    </section>
+
+    <section class="section" style="background: var(--black-deep); color: var(--white-soft);">
+        <div class="astro-container" style="max-width: 900px;">
+            <div class="highlight-box">
+                <h3 style="color: var(--gold-primary); margin-bottom: var(--spacing-sm);">What You'll Discover</h3>
+                <ul style="color: var(--purple-soft); line-height: 1.8;">
+                    <li>Your Sun, Moon, and Rising signs with exact degrees</li>
+                    <li>All planetary placements by sign and house</li>
+                    <li>House cusps using Placidus system</li>
+                    <li>Lunar Nodes (North & South)</li>
+                    <li>Professional-grade astrological calculations</li>
+                </ul>
+            </div>
+
+            <div class="chart-section">
+                <h2
+                    style="font-family: var(--font-heading); color: var(--gold-primary); margin-bottom: var(--spacing-md);">
+                    Enter Your Birth Data</h2>
+
+                <form id="chartForm" style="display: flex; flex-direction: column; gap: var(--spacing-md);">
+                    <div>
+                        <label
+                            style="display: block; color: var(--purple-soft); margin-bottom: var(--spacing-xs);">Name</label>
+                        <input type="text" id="nameInput" placeholder="Your name"
+                            style="width: 100%; padding: var(--spacing-sm); border-radius: 8px; border: 1px solid rgba(212, 175, 55, 0.3); background: var(--black-deep); color: var(--white-soft); font-family: var(--font-body);">
+                    </div>
+
+                    <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: var(--spacing-sm);">
+                        <div>
+                            <label
+                                style="display: block; color: var(--purple-soft); margin-bottom: var(--spacing-xs);">Month</label>
+                            <select id="monthInput"
+                                style="width: 100%; padding: var(--spacing-sm); border-radius: 8px; border: 1px solid rgba(212, 175, 55, 0.3); background: var(--black-deep); color: var(--white-soft); font-family: var(--font-body);">
+                                <option value="1">January</option>
+                                <option value="2">February</option>
+                                <option value="3">March</option>
+                                <option value="4">April</option>
+                                <option value="5">May</option>
+                                <option value="6">June</option>
+                                <option value="7">July</option>
+                                <option value="8">August</option>
+                                <option value="9">September</option>
+                                <option value="10">October</option>
+                                <option value="11">November</option>
+                                <option value="12">December</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label
+                                style="display: block; color: var(--purple-soft); margin-bottom: var(--spacing-xs);">Day</label>
+                            <input type="number" id="dayInput" min="1" max="31" placeholder="15" required
+                                style="width: 100%; padding: var(--spacing-sm); border-radius: 8px; border: 1px solid rgba(212, 175, 55, 0.3); background: var(--black-deep); color: var(--white-soft); font-family: var(--font-body);">
+                        </div>
+                        <div>
+                            <label
+                                style="display: block; color: var(--purple-soft); margin-bottom: var(--spacing-xs);">Year</label>
+                            <input type="number" id="yearInput" min="1900" max="2100" placeholder="1990" required
+                                style="width: 100%; padding: var(--spacing-sm); border-radius: 8px; border: 1px solid rgba(212, 175, 55, 0.3); background: var(--black-deep); color: var(--white-soft); font-family: var(--font-body);">
+                        </div>
+                    </div>
+
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--spacing-sm);">
+                        <div>
+                            <label
+                                style="display: block; color: var(--purple-soft); margin-bottom: var(--spacing-xs);">Hour
+                                (24h)</label>
+                            <input type="number" id="hourInput" min="0" max="23" placeholder="12"
+                                style="width: 100%; padding: var(--spacing-sm); border-radius: 8px; border: 1px solid rgba(212, 175, 55, 0.3); background: var(--black-deep); color: var(--white-soft); font-family: var(--font-body);">
+                        </div>
+                        <div>
+                            <label
+                                style="display: block; color: var(--purple-soft); margin-bottom: var(--spacing-xs);">Minute</label>
+                            <input type="number" id="minuteInput" min="0" max="59" placeholder="00"
+                                style="width: 100%; padding: var(--spacing-sm); border-radius: 8px; border: 1px solid rgba(212, 175, 55, 0.3); background: var(--black-deep); color: var(--white-soft); font-family: var(--font-body);">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label style="display: block; color: var(--purple-soft); margin-bottom: var(--spacing-xs);">Birth
+                            Location</label>
+                        <input type="text" id="locationInput" placeholder="City, Country" required
+                            style="width: 100%; padding: var(--spacing-sm); border-radius: 8px; border: 1px solid rgba(212, 175, 55, 0.3); background: var(--black-deep); color: var(--white-soft); font-family: var(--font-body);">
+                        <p style="font-size: 0.85rem; color: var(--purple-muted); margin-top: var(--spacing-xs);">
+                            We'll use this to look up coordinates automatically
+                        </p>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-large" style="width: 100%;">Calculate My
+                        Chart</button>
+                </form>
+
+                <p
+                    style="text-align: center; color: var(--purple-muted); margin-top: var(--spacing-md); font-size: 0.9rem;">
+                    Professional-grade calculations using Swiss Ephemeris algorithms
+                </p>
+            </div>
+
+            <!-- Chart Results -->
+            <div id="chartResults" class="chart-results">
+                <div class="chart-section">
+                    <h2
+                        style="font-family: var(--font-heading); color: var(--gold-primary); margin-bottom: var(--spacing-md);">
+                        Your Natal Chart
+                    </h2>
+
+                    <div id="chartInfo"
+                        style="background: var(--black-deep);">
+                        <!-- Birth info will be inserted here -->
+                    </div>
+
+                    <h3 style="color: var(--gold-light); margin-bottom: 1rem;">The Big Three</h3>
+                    <div class="big-three" id="bigThree">
+                        <!-- Big three will be inserted here -->
+                    </div>
+
+                    <h3 style="color: var(--gold-light); margin: 2rem 0 1rem;">Planetary Positions</h3>
+                    <table class="planet-table" id="planetTable">
+                        <thead>
+                            <tr>
+                                <th>Planet</th>
+                                <th>Sign</th>
+                                <th>Degree</th>
+                                <th>House</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Planets will be inserted here -->
+                        </tbody>
+                    </table>
+
+                    <h3 style="color: var(--gold-light); margin: 2rem 0 1rem;">House Cusps</h3>
+                    <table class="planet-table" id="houseTable">
+                        <thead>
+                            <tr>
+                                <th>House</th>
+                                <th>Sign</th>
+                                <th>Degree</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Houses will be inserted here -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="cta-box" style="margin: var(--spacing-xl) 0;">
+                <h3 style="color: var(--white-soft); font-family: var(--font-heading);">Want a Deep Dive?</h3>
+                <p>Get a comprehensive 30-50 page natal report with Jungian psychological interpretation</p>
+                <a href="#" data-order="natal-report" class="btn btn-primary btn-large"
+                    style="margin-top: var(--spacing-sm);">Order Full Report ($47-97)</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="astro-container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 AstroTheist. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../natal-calculator.js"></script>
+    <script src="../script.js"></script>
+	<script src="../order-form.js"></script>
+    <script>
+        // Zodiac sign SVG icons
+        const zodiacIcons = {
+            'Aries': '<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M6 8c0-3.3 2.7-6 6-6s6 2.7 6 6"/></svg>',
+            'Taurus': '<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="14" r="6"/><path d="M5 8c0-3.9 3.1-7 7-7s7 3.1 7 7"/></svg>',
+            'Gemini': '<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2v20M18 2v20M6 6h12M6 18h12"/></svg>',
+            'Cancer': '<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="7" cy="12" r="3"/><circle cx="17" cy="12" r="3"/><path d="M7 9c0-2.8 2.2-5 5-5s5 2.2 5 5M7 15c0 2.8 2.2 5 5 5s5-2.2 5-5"/></svg>',
+            'Leo': '<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="6" cy="6" r="3"/><path d="M6 9c0 6 4 11 10 11"/><circle cx="16" cy="20" r="2"/></svg>',
+            'Virgo': '<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 2v14c0 2.2 1.8 4 4 4h0M9 2v16M15 2v16M21 2v10c0 3.3-2.7 6-6 6h-1"/></svg>',
+            'Libra': '<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 14h18M3 18h18"/><path d="M12 2c-3.3 0-6 2.7-6 6h12c0-3.3-2.7-6-6-6z"/></svg>',
+            'Scorpio': '<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 2v14c0 2.2 1.8 4 4 4h0M9 2v16M15 2v16M21 2v10l-3 3-3-3"/></svg>',
+            'Sagittarius': '<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21l18-18M21 3v10M21 3h-10"/></svg>',
+            'Capricorn': '<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 2v14c0 2.2 1.8 4 4 4h0M9 2v16"/><circle cx="16" cy="16" r="5"/></svg>',
+            'Aquarius': '<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 10c2-1 4 1 6 0s4-1 6 0 4 1 6 0M3 18c2-1 4 1 6 0s4-1 6 0 4 1 6 0"/></svg>',
+            'Pisces': '<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M6 4c-2 3-2 13 0 16M18 4c2 3 2 13 0 16"/></svg>'
+        };
+
+        // Planet SVG icons
+        const planetIcons = {
+            'Sun': '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>',
+            'Moon': '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>',
+            'Mercury': '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="6"/><path d="M12 2v4M12 18v4M6 6l3 3M15 15l3 3"/></svg>',
+            'Venus': '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="5"/><path d="M12 13v8M9 18h6"/></svg>',
+            'Mars': '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="10" cy="14" r="6"/><path d="M16 8l6-6M22 2v6M16 2h6"/></svg>',
+            'Jupiter': '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M8 6h8M6 12h12M8 18h8"/></svg>',
+            'Saturn': '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2c-3 0-5 2-5 5v10c0 3 2 5 5 5s5-2 5-5V7c0-3-2-5-5-5zM4 10h16"/></svg>',
+            'Uranus': '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="14" r="6"/><path d="M12 2v6M8 4l4 4 4-4"/></svg>',
+            'Neptune': '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M6 8v8c0 3.3 2.7 6 6 6s6-2.7 6-6V8"/></svg>',
+            'Pluto': '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="6"/><path d="M12 2v4M12 18v4M2 12h4M18 12h4"/></svg>',
+            'North Node': '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l-8 8h6v10h4V10h6z"/></svg>',
+            'South Node': '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22l8-8h-6V4h-4v10H4z"/></svg>'
+        };
+
+        const calculator = new NatalChartCalculator();
+
+        // Geocoding cache to avoid repeated API calls
+        const geocodeCache = {};
+
+        // Simple geocoding using OpenStreetMap Nominatim
+        async function geocodeLocation(location) {
+            if (geocodeCache[location]) {
+                return geocodeCache[location];
+            }
+
+            try {
+                const response = await fetch(
+                    `https://nominatim.openstreetmap.org/search?q=${encodeURIComponent(location)}&format=json&limit=1`
+                );
+                const data = await response.json();
+
+                if (data && data.length > 0) {
+                    const result = {
+                        lat: parseFloat(data[0].lat),
+                        lon: parseFloat(data[0].lon),
+                        display_name: data[0].display_name
+                    };
+                    geocodeCache[location] = result;
+                    return result;
+                }
+            } catch (error) {
+                console.error('Geocoding error:', error);
+            }
+
+            return null;
+        }
+
+        // Determine which house a planet is in
+        function getPlanetHouse(planetLongitude, houses) {
+            for (let i = 1; i <= 12; i++) {
+                const currentHouse = houses[i].longitude;
+                const nextHouse = houses[i === 12 ? 1 : i + 1].longitude;
+
+                if (nextHouse > currentHouse) {
+                    if (planetLongitude >= currentHouse && planetLongitude < nextHouse) {
+                        return i;
+                    }
+                } else {
+                    // Handle wrap around 360/0
+                    if (planetLongitude >= currentHouse || planetLongitude < nextHouse) {
+                        return i;
+                    }
+                }
+            }
+            return 1; // Default to 1st house
+        }
+
+        // Display chart results
+        function displayChart(chart, birthData) {
+            const resultsDiv = document.getElementById('chartResults');
+            resultsDiv.classList.add('active');
+            resultsDiv.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+            // Display birth info
+            const chartInfo = document.getElementById('chartInfo');
+            chartInfo.innerHTML = `
+                <h4 style="color: var(--gold-primary); margin-bottom: 0.5rem;">${birthData.name}</h4>
+                <p style="color: var(--purple-soft); margin: 0.25rem 0;">
+                    Born: ${birthData.month}/${birthData.day}/${birthData.year} at ${birthData.hour}:${birthData.minute.toString().padStart(2, '0')}
+                </p>
+                <p style="color: var(--purple-soft); margin: 0.25rem 0;">
+                    Location: ${birthData.locationName}
+                </p>
+                <p style="color: var(--purple-muted); margin: 0.25rem 0; font-size: 0.9rem;">
+                    Coordinates: ${birthData.lat.toFixed(4)}°N, ${birthData.lon.toFixed(4)}°E
+                </p>
+            `;
+
+            // Display Big Three
+            const bigThree = document.getElementById('bigThree');
+            bigThree.innerHTML = `
+                <div class="big-three-item">
+                    <h4>Sun Sign</h4>
+                    <div class="zodiac-icon">${zodiacIcons[chart.Sun.sign]}</div>
+                    <div class="sign">${chart.Sun.sign}</div>
+                    <div class="degree">${chart.Sun.degree}°${chart.Sun.minute.toString().padStart(2, '0')}'</div>
+                </div>
+                <div class="big-three-item">
+                    <h4>Moon Sign</h4>
+                    <div class="zodiac-icon">${zodiacIcons[chart.Moon.sign]}</div>
+                    <div class="sign">${chart.Moon.sign}</div>
+                    <div class="degree">${chart.Moon.degree}°${chart.Moon.minute.toString().padStart(2, '0')}'</div>
+                </div>
+                <div class="big-three-item">
+                    <h4>Rising Sign</h4>
+                    <div class="zodiac-icon">${zodiacIcons[chart.Ascendant.sign]}</div>
+                    <div class="sign">${chart.Ascendant.sign}</div>
+                    <div class="degree">${chart.Ascendant.degree}°${chart.Ascendant.minute.toString().padStart(2, '0')}'</div>
+                </div>
+            `;
+
+            // Display planets
+            const planetTable = document.getElementById('planetTable').querySelector('tbody');
+            const planets = ['Sun', 'Moon', 'Mercury', 'Venus', 'Mars', 'Jupiter', 'Saturn', 'Uranus', 'Neptune', 'Pluto'];
+
+            planetTable.innerHTML = planets.map(planet => {
+                const data = chart[planet];
+                const house = getPlanetHouse(data.longitude, chart.houses);
+                return `
+                    <tr>
+                        <td>
+                            <span class="planet-symbol">${planetIcons[planet]}</span>
+                            ${planet}
+                        </td>
+                        <td>${data.sign}</td>
+                        <td>${data.degree}°${data.minute.toString().padStart(2, '0')}'</td>
+                        <td>${house}</td>
+                    </tr>
+                `;
+            }).join('');
+
+            // Add Nodes
+            planetTable.innerHTML += `
+                <tr>
+                    <td>
+                        <span class="planet-symbol">${planetIcons['North Node']}</span>
+                        North Node
+                    </td>
+                    <td>${chart['North Node'].sign}</td>
+                    <td>${chart['North Node'].degree}°${chart['North Node'].minute.toString().padStart(2, '0')}'</td>
+                    <td>${getPlanetHouse(chart['North Node'].longitude, chart.houses)}</td>
+                </tr>
+                <tr>
+                    <td>
+                        <span class="planet-symbol">${planetIcons['South Node']}</span>
+                        South Node
+                    </td>
+                    <td>${chart['South Node'].sign}</td>
+                    <td>${chart['South Node'].degree}°${chart['South Node'].minute.toString().padStart(2, '0')}'</td>
+                    <td>${getPlanetHouse(chart['South Node'].longitude, chart.houses)}</td>
+                </tr>
+            `;
+
+            // Display houses
+            const houseTable = document.getElementById('houseTable').querySelector('tbody');
+            houseTable.innerHTML = '';
+            for (let i = 1; i <= 12; i++) {
+                const house = chart.houses[i];
+                houseTable.innerHTML += `
+                    <tr>
+                        <td>${i}</td>
+                        <td>${house.sign}</td>
+                        <td>${house.degree}°${house.minute.toString().padStart(2, '0')}'</td>
+                    </tr>
+                `;
+            }
+        }
+
+        // Form submission
+        document.getElementById('chartForm').addEventListener('submit', async function (e) {
+            e.preventDefault();
+
+            const submitBtn = this.querySelector('button[type="submit"]');
+            const originalText = submitBtn.textContent;
+            submitBtn.textContent = 'Calculating...';
+            submitBtn.disabled = true;
+
+            try {
+                // Get form values
+                const name = document.getElementById('nameInput').value || 'Your Chart';
+                const month = parseInt(document.getElementById('monthInput').value);
+                const day = parseInt(document.getElementById('dayInput').value);
+                const year = parseInt(document.getElementById('yearInput').value);
+                const hour = parseInt(document.getElementById('hourInput').value) || 12;
+                const minute = parseInt(document.getElementById('minuteInput').value) || 0;
+                const location = document.getElementById('locationInput').value;
+
+                // Validate
+                if (!day || !year || !location) {
+                    alert('Please fill in at least the date and location.');
+                    submitBtn.textContent = originalText;
+                    submitBtn.disabled = false;
+                    return;
+                }
+
+                // Geocode location
+                submitBtn.textContent = 'Finding location...';
+                const coords = await geocodeLocation(location);
+
+                if (!coords) {
+                    alert('Could not find location. Please try a different format (e.g., "New York, USA" or "London, UK")');
+                    submitBtn.textContent = originalText;
+                    submitBtn.disabled = false;
+                    return;
+                }
+
+                // Calculate chart
+                submitBtn.textContent = 'Calculating planets...';
+                const chart = calculator.calculate(year, month, day, hour, minute, coords.lat, coords.lon);
+
+                // Display results
+                displayChart(chart, {
+                    name,
+                    month,
+                    day,
+                    year,
+                    hour,
+                    minute,
+                    locationName: coords.display_name,
+                    lat: coords.lat,
+                    lon: coords.lon
+                });
+
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+
+            } catch (error) {
+                console.error('Calculation error:', error);
+                alert('An error occurred while calculating your chart. Please try again.');
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+            }
+        });
+    </script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

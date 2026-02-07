@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Celebrity Chart Viewer - AstroTheist</title>
+    <meta name="description" content="View the natal chart details of your favorite celebrity."
+    <link rel="canonical" href="https://astrotheist.com/reference/celebrity-viewer.html">
+    <meta property="og:title" content="Celebrity Chart Viewer - AstroTheist">
+    <meta property="og:description" content="View the natal chart details of your favorite celebrity.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://astrotheist.com/reference/celebrity-viewer.html">
+    <meta property="og:image" content="https://astrotheist.com/images/og-celebrity.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Celebrity Chart Viewer - AstroTheist">
+    <meta name="twitter:description" content="View the natal chart details of your favorite celebrity.">
+    <meta name="twitter:image" content="https://astrotheist.com/images/og-celebrity.jpg">>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+
+    <style>
+        .celeb-profile-header {
+            background: linear-gradient(to bottom, var(--black-deep), var(--purple-dark));
+            padding: 4rem 0;
+            text-align: center;
+            border-bottom: 1px solid rgba(197, 160, 89, 0.2);
+        }
+
+        .celeb-profile-img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 3px solid var(--gold-primary);
+            box-shadow: 0 0 20px rgba(197, 160, 89, 0.3);
+            margin-bottom: 2rem;
+        }
+
+        .placement-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .placement-card {
+            background: rgba(30, 30, 30, 0.5);
+            padding: 1.5rem;
+            border-radius: 12px;
+            border-left: 3px solid var(--gold-dark);
+            text-align: center;
+        }
+
+        .placement-icon {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .chart-section {
+            padding: 4rem 0;
+        }
+    </style>
+</head>
+
+<body>
+                                                                                                                <nav class="astro-navbar">
+        <div class="astro-container astro-nav-container">
+            <a href="../index.html" class="astro-logo">
+                <svg class="astro-logo-icon" viewBox="0 0 100 60" width="100" height="60">
+                    <circle cx="25" cy="40" r="1.5" fill="currentColor" />
+                    <circle cx="45" cy="35" r="1.5" fill="currentColor" />
+                    <circle cx="65" cy="20" r="2.5" fill="currentColor" />
+                    <circle cx="85" cy="30" r="1.5" fill="currentColor" />
+                    <circle cx="35" cy="50" r="1.5" fill="currentColor" />
+                    <path d="M25 40 L45 35 L65 20 L85 30 M45 35 L35 50" stroke="currentColor" stroke-width="0.5" fill="none" opacity="0.6" />
+                    <path d="M65 20 L65 10 M60 20 L70 20" stroke="currentColor" stroke-width="0.5" fill="none" />
+                </svg>
+                <span class="astro-logo-text">astrotheist</span>
+            </a>
+            <button class="astro-mobile-menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="astro-nav-menu">
+    <li class="astro-nav-item astro-dropdown">
+        <a href="#" class="astro-nav-link">Learn</a>
+        <div class="astro-dropdown-menu astro-dropdown-mega">
+            <div class="astro-dropdown-column">
+                <h4>Core Wisdom</h4>
+                <a href="../learn/planets/index.html">The Planets</a>
+                <a href="../learn/houses/index.html">The Houses</a>
+                <a href="../learn/signs/index.html">The Signs</a>
+                <a href="../learn/angles/index.html">Angles & Points</a>
+                <a href="../learn/patterns/index.html">Patterns</a>
+                <a href="../learn/aspects/index.html">Aspects</a>
+                <a href="../learn/aspects/natal/index.html">Planetary Aspects</a>
+                <a href="../learn/critical-degrees/index.html">Critical Degrees</a>
+            </div>
+            <div class="astro-dropdown-column">
+                <h4>Planets in Signs</h4>
+                <a href="../learn/planets/in-signs/sun/aries.html">Sun in Signs</a>
+                <a href="../learn/planets/in-signs/moon/aries.html">Moon in Signs</a>
+                <a href="../learn/planets/in-signs/mercury/aries.html">Mercury in Signs</a>
+                <a href="../learn/planets/in-signs/venus/aries.html">Venus in Signs</a>
+                <a href="../learn/planets/in-signs/mars/aries.html">Mars in Signs</a>
+                <a href="../learn/planets/in-signs/jupiter/aries.html">Jupiter in Signs</a>
+                <a href="../learn/planets/in-signs/saturn/aries.html">Saturn in Signs</a>
+            </div>
+            <div class="astro-dropdown-column">
+                <h4>Planets in Houses</h4>
+                <a href="../learn/planets/in-houses/sun/house1.html">Sun in Houses</a>
+                <a href="../learn/planets/in-houses/moon/house1.html">Moon in Houses</a>
+                <a href="../learn/planets/in-houses/mercury/house1.html">Mercury in Houses</a>
+                <a href="../learn/planets/in-houses/venus/house1.html">Venus in Houses</a>
+                <a href="../learn/planets/in-houses/mars/house1.html">Mars in Houses</a>
+                <a href="../learn/planets/in-houses/jupiter/house1.html">Jupiter in Houses</a>
+                <a href="../learn/planets/in-houses/saturn/house1.html">Saturn in Houses</a>
+            </div>
+            <div class="astro-dropdown-column">
+                <h4>Specialized</h4>
+                <a href="../learn/houses/index.html">Signs in Houses</a>
+                <a href="../tools/chart-calculator.html">Free Natal Chart</a>
+                <a href="../tools/horoscopes.html">Horoscopes</a>
+                <a href="../tools/synastry.html">Synastry Calculator</a>
+                <hr style="border: 0; border-top: 1px solid rgba(197,160,89,0.1); margin: 10px 0;">
+                <a href="../store/index.html" style="color: var(--gold-light);">Personalized Reports</a>
+            </div>
+        </div>
+    </li>
+    <li class="astro-nav-item astro-dropdown">
+        <a href="../learn/birthdays/index.html" class="astro-nav-link">Birthdays</a>
+        <div class="astro-dropdown-menu">
+            <a href="../learn/birthdays/january.html">January</a>
+            <a href="../learn/birthdays/february.html">February</a>
+            <a href="../learn/birthdays/march.html">March</a>
+            <a href="../learn/birthdays/april.html">April</a>
+            <a href="../learn/birthdays/may.html">May</a>
+            <a href="../learn/birthdays/june.html">June</a>
+            <a href="../learn/birthdays/july.html">July</a>
+            <a href="../learn/birthdays/august.html">August</a>
+            <a href="../learn/birthdays/september.html">September</a>
+            <a href="../learn/birthdays/october.html">October</a>
+            <a href="../learn/birthdays/november.html">November</a>
+            <a href="../learn/birthdays/december.html">December</a>
+        </div>
+    </li>
+    <li class="astro-nav-item astro-dropdown">
+        <a href="#" class="astro-nav-link">Reports</a>
+        <div class="astro-dropdown-menu">
+            <a href="../tools/chart-calculator.html">Free Natal Chart</a>
+            <a href="../tools/horoscopes.html">Horoscopes</a>
+            <a href="../tools/synastry.html">Synastry Calculator</a>
+            <hr style="border: 0; border-top: 1px solid rgba(197,160,89,0.1); margin: 10px 0;">
+            <a href="../services/natal-report.html">Natal Report</a>
+            <a href="../services/synastry-report.html">Synastry Report</a>
+            <a href="../services/healing.html">Healing Sessions</a>
+            <a href="../services/consultation.html">1-on-1 Consultation</a>
+            <a href="../services/birthday.html">Birthday Interpretation</a>
+        </div>
+    </li>
+    <li class="astro-nav-item astro-dropdown">
+        <a href="#" class="astro-nav-link">Reference</a>
+        <div class="astro-dropdown-menu">
+            <a href="transits.html">Major Transits</a>
+            <a href="resources.html">Resources</a>
+        </div>
+    </li>
+    <li class="astro-nav-item"><a href="../blog/index.html" class="astro-nav-link">Blog</a></li>
+    <li class="astro-nav-item"><a href="../about.html" class="astro-nav-link">About</a></li>
+    <li class="astro-nav-item"><a href="../store/index.html" class="astro-nav-link">Store</a></li>
+    <li class="astro-nav-item"><a href="../community/index.html" class="astro-nav-link">Community</a></li>
+</ul>
+        </div>
+    </nav>
+
+    <div id="loading" style="text-align: center; padding: 5rem; color: var(--gold-primary);">
+        <h2>Consulting the Stars...</h2>
+    </div>
+
+    <div id="content" style="display: none;">
+        <header class="celeb-profile-header">
+            <div class="astro-container">
+                <img src="" alt="AstroTheist Astrology Insights" class="celeb-profile-img" id="profile-img">
+                <h1 id="profile-name" style="font-size: 3.5rem; color: var(--gold-primary);">Celeb Name</h1>
+                <p id="profile-bio"
+                    style="font-size: 1.2rem; max-width: 600px; margin: 1rem auto; color: var(--white-soft);">Bio here
+                </p>
+                <div style="margin-top: 1.5rem;">
+                    <span class="badge bg-warning text-dark" id="profile-bday" style="font-size: 1rem;">Birthday</span>
+                </div>
+            </div>
+        </header>
+
+        <section class="chart-section">
+            <div class="astro-container">
+                <h2 class="section-title">Cosmic Blueprint</h2>
+                <div class="placement-grid">
+                    <div class="placement-card">
+                        <span class="placement-icon">☉</span>
+                        <h3 style="color: var(--gold-light);">Sun Sign</h3>
+                        <p id="profile-sun" style="font-size: 1.5rem; font-weight: bold;">Sign</p>
+                        <p style="font-size: 0.9rem; color: var(--purple-soft);">Core Identity</p>
+                    </div>
+                    <div class="placement-card">
+                        <span class="placement-icon">☽</span>
+                        <h3 style="color: var(--gold-light);">Moon Sign</h3>
+                        <p id="profile-moon" style="font-size: 1.5rem; font-weight: bold;">Sign</p>
+                        <p style="font-size: 0.9rem; color: var(--purple-soft);">Emotional Self</p>
+                    </div>
+                    <div class="placement-card">
+                        <span class="placement-icon">↑</span>
+                        <h3 style="color: var(--gold-light);">Ascendant</h3>
+                        <p id="profile-asc" style="font-size: 1.5rem; font-weight: bold;">Sign</p>
+                        <p style="font-size: 0.9rem; color: var(--purple-soft);">Public Mask</p>
+                    </div>
+                </div>
+
+                <div class="cta-box" style="margin-top: 4rem;">
+                    <h3>Share a Birthday with <span id="cta-name"></span>?</h3>
+                    <p>See how your chart compares with our Synastry Calculator.</p>
+                    <a href="../tools/synastry.html" class="btn btn-primary">Check Compatibility</a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <div class="astro-container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 AstroTheist. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- import data -->
+    <script src="../js/celebrity-data.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const params = new URLSearchParams(window.location.search);
+            const id = params.get('id');
+            const loading = document.getElementById('loading');
+            const content = document.getElementById('content');
+
+            if (typeof celebrityData === 'undefined') {
+                loading.innerHTML = "<h2>Error loading database.</h2>";
+                return;
+            }
+
+            const celeb = celebrityData.find(c => c.id === id);
+
+            if (celeb) {
+                document.title = `${celeb.name} Natal Chart - AstroTheist`;
+                document.getElementById('profile-name').textContent = celeb.name;
+                document.getElementById('profile-bio').textContent = celeb.bio;
+                document.getElementById('profile-img').src = celeb.image;
+                document.getElementById('profile-img').alt = celeb.name;
+
+                // Format birthday (MM-DD) to readable
+                const [month, day] = celeb.birthday.split('-');
+                const monthName = new Date(2026, month - 1, 1).toLocaleString('default', { month: 'long' });
+                document.getElementById('profile-bday').textContent = `${monthName} ${day}`;
+
+                document.getElementById('profile-sun').textContent = celeb.sun;
+                document.getElementById('profile-moon').textContent = celeb.moon;
+                document.getElementById('profile-asc').textContent = celeb.ascendant || "Unknown";
+
+                document.getElementById('cta-name').textContent = celeb.name;
+
+                loading.style.display = 'none';
+                content.style.display = 'block';
+            } else {
+                loading.innerHTML = "<h2>Celebrity not found.</h2>";
+            }
+        });
+    </script>
+</body>
+
+</html>

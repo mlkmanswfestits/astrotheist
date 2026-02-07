@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - AstroTheist</title>
+    <meta name="description" content="Secure checkout for AstroTheist natal reports and astrology services."
+    <link rel="canonical" href="https://astrotheist.com/checkout.html">
+    <meta property="og:title" content="Checkout - AstroTheist">
+    <meta property="og:description" content="Secure checkout for AstroTheist natal reports and astrology services.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://astrotheist.com/checkout.html">
+    <meta property="og:image" content="https://astrotheist.com/images/og-main.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Checkout - AstroTheist">
+    <meta name="twitter:description" content="Secure checkout for AstroTheist natal reports and astrology services.">
+    <meta name="twitter:image" content="https://astrotheist.com/images/og-main.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" href="order-form.css">
+</head>
+
+<body style="background: var(--black-deep);">
+    <!-- Simple Header -->
+    <header style="padding: 2rem 0; text-align: center; border-bottom: 1px solid rgba(197, 160, 89, 0.1);">
+        <a href="index.html" class="astro-logo" style="justify-content: center;">
+            <svg class="astro-logo-icon" viewBox="0 0 100 60" width="80" height="48">
+                <circle cx="25" cy="40" r="1.5" fill="currentColor" />
+                <circle cx="45" cy="35" r="1.5" fill="currentColor" />
+                <circle cx="65" cy="20" r="2.5" fill="currentColor" />
+                <circle cx="85" cy="30" r="1.5" fill="currentColor" />
+                <circle cx="35" cy="50" r="1.5" fill="currentColor" />
+                <path d="M25 40 L45 35 L65 20 L85 30 M45 35 L35 50" stroke="currentColor" stroke-width="0.5" fill="none"
+                    opacity="0.6" />
+            </svg>
+            <span class="astro-logo-text">astrotheist</span>
+        </a>
+    </header>
+
+    <div class="astro-container">
+        <div id="checkoutContent" class="checkout-container">
+            <!-- Content populated by JS -->
+            <div class="text-center">
+                <div class="spinner-border text-gold" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hidden form for email submission via Formspree -->
+    <form id="emailForwardForm" action="https://formspree.io/f/channingcreager777@gmail.com" method="POST"
+        style="display: none;">
+        <input type="hidden" name="_subject" value="New Order from AstroTheist">
+        <div id="hiddenFields"></div>
+    </form>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const orderData = JSON.parse(localStorage.getItem('pendingOrder'));
+            const container = document.getElementById('checkoutContent');
+
+            if (!orderData) {
+                container.innerHTML = `
+                    <div class="empty-cart">
+                        <h2 class="hero-title">Your cart is empty</h2>
+                        <p class="hero-subtitle">No order data found. Please return to the shop.</p>
+                        <a href="store/index.html" class="btn btn-primary mt-4">Browse Reports</a>
+                    </div>
+                `;
+                return;
+            }
+
+            // Populate Summary
+            let detailsHtml = '';
+            const hiddenFieldsContainer = document.getElementById('hiddenFields');
+            hiddenFieldsContainer.innerHTML = '';
+
+            for (const [key, value] of Object.entries(orderData)) {
+                if (key === 'serviceType' || key === 'priceString' || key === 'orderId' || key === 'orderDate') continue;
+
+                const label = key.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase());
+                detailsHtml += `
+                    <div class="detail-group">
+                        <label>${label}</label>
+                        <span>${value}</span>
+                    </div>
+                `;
+
+                // Add to hidden form
+                const input = document.createElement('input');
+                input.type = 'hidden';
+                input.name = label;
+                input.value = value;
+                hiddenFieldsContainer.appendChild(input);
+            }
+
+            // Add service info to hidden form
+            const serviceInput = document.createElement('input');
+            serviceInput.type = 'hidden';
+            serviceInput.name = 'Service';
+            serviceInput.value = orderData.serviceType;
+            hiddenFieldsContainer.appendChild(serviceInput);
+
+            const priceInput = document.createElement('input');
+            priceInput.type = 'hidden';
+            priceInput.name = 'Total';
+            priceInput.value = orderData.priceString || 'N/A';
+            hiddenFieldsContainer.appendChild(priceInput);
+
+            container.innerHTML = `
+                <h1 class="hero-title mb-4" style="text-align: left; font-size: 2.5rem;">Order Summary</h1>
+                <div class="order-item">
+                    <div>
+                        <h3 class="product-title" style="margin: 0;">${orderData.serviceType}</h3>
+                        <p style="color: var(--gold-light); margin: 0; font-size: 0.9rem;">Order ID: ${orderData.orderId}</p>
+                    </div>
+                    <div class="price">${orderData.priceString || 'N/A'}</div>
+                </div>
+
+                <div class="order-details">
+                    ${detailsHtml}
+                </div>
+
+                <div class="payment-methods">
+                    <h4 class="mb-4" style="color: var(--white-soft);">Select Payment Method</h4>
+                    <p class="mb-4" style="font-size: 0.9rem; color: var(--purple-muted);">Your order details will be sent to the astrologer automatically upon payment initiation.</p>
+                    
+                    <button id="payPaypal" class="payment-btn paypal-btn">
+                        <img src="https://www.paypalobjects.com/webstatic/mktg/logo/pp_cc_mark_37x23.jpg" alt="PayPal">
+                        Pay with PayPal
+                    </button>
+                    
+                    <button id="payShopify" class="payment-btn shopify-btn">
+                        <img src="https://cdn.shopify.com/assets/images/logos/shopify-bag.svg" alt="Shopify" width="24">
+                        Pay with Shopify
+                    </button>
+
+                    <p class="mt-4" style="font-size: 0.8rem; color: var(--purple-muted);">
+                        Payments are processed securely. You will receiving a confirmation email at ${orderData.email || 'your email'} after processing.
+                    </p>
+                </div>
+            `;
+
+            // Payment Handle
+            const handlePayment = (method) => {
+                // 1. Send data via Formspree
+                const form = document.getElementById('emailForwardForm');
+
+                // Set custom subject
+                form.querySelector('[name="_subject"]').value = `NEW ORDER: ${orderData.serviceType} - ${orderData.name || 'Customer'}`;
+
+                // Use fetch to submit form without redirecting (or redirecting after)
+                const formData = new FormData(form);
+
+                // Show loading on the clicked button
+                const btn = method === 'paypal' ? document.getElementById('payPaypal') : document.getElementById('payShopify');
+                const originalText = btn.innerHTML;
+                btn.innerHTML = 'Processing...';
+                btn.disabled = true;
+
+                fetch(form.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                }).then(response => {
+                    // Redirect to payment provider
+                    if (method === 'paypal') {
+                        // Demo URL or actual payment link
+                        // In a real app, you'd calculate the price and generate a link
+                        window.location.href = `https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=channingcreager777@gmail.com&item_name=${encodeURIComponent(orderData.serviceType)}&amount=${(orderData.priceString || '').replace('$', '')}&currency_code=USD`;
+                    } else {
+                        // Shopify checkout link or similar
+                        window.location.href = "https://astrotheist.myshopify.com/cart";
+                    }
+                }).catch(error => {
+                    console.error('Error sending email:', error);
+                    alert('There was an error sending your order details. Redirecting to payment anyway...');
+                    // Redirect anyway so we don't block revenue
+                    if (method === 'paypal') {
+                        window.location.href = `https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=channingcreager777@gmail.com&item_name=${encodeURIComponent(orderData.serviceType)}&amount=${(orderData.priceString || '').replace('$', '')}&currency_code=USD`;
+                    } else {
+                        window.location.href = "https://astrotheist.myshopify.com/cart";
+                    }
+                });
+            };
+
+            document.getElementById('payPaypal').addEventListener('click', () => handlePayment('paypal'));
+            document.getElementById('payShopify').addEventListener('click', () => handlePayment('shopify'));
+        });
+    </script>
+	<script src="order-form.js"></script>
+</body>
+
+</html>

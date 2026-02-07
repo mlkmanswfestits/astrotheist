@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Category - Community Forum - AstroTheist</title>
+    <meta name="description" content="Browse astrology discussions by category.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../order-form.css">
+</head>
+
+<body class="forum-category-page">
+    <!-- Navigation (Standardized) -->
+                                                                                                    <nav class="astro-navbar">
+        <div class="astro-container astro-nav-container">
+            <a href="../index.html" class="astro-logo">
+                <svg class="astro-logo-icon" viewBox="0 0 100 60" width="100" height="60">
+                    <circle cx="25" cy="40" r="1.5" fill="currentColor" />
+                    <circle cx="45" cy="35" r="1.5" fill="currentColor" />
+                    <circle cx="65" cy="20" r="2.5" fill="currentColor" />
+                    <circle cx="85" cy="30" r="1.5" fill="currentColor" />
+                    <circle cx="35" cy="50" r="1.5" fill="currentColor" />
+                    <path d="M25 40 L45 35 L65 20 L85 30 M45 35 L35 50" stroke="currentColor" stroke-width="0.5" fill="none" opacity="0.6" />
+                    <path d="M65 20 L65 10 M60 20 L70 20" stroke="currentColor" stroke-width="0.5" fill="none" />
+                </svg>
+                <span class="astro-logo-text">astrotheist</span>
+            </a>
+            <button class="astro-mobile-menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="astro-nav-menu">
+    <li class="astro-nav-item astro-dropdown">
+        <a href="#" class="astro-nav-link">Learn</a>
+        <div class="astro-dropdown-menu astro-dropdown-mega">
+            <div class="astro-dropdown-column">
+                <h4>Core Wisdom</h4>
+                <a href="../learn/planets/index.html">The Planets</a>
+                <a href="../learn/houses/index.html">The Houses</a>
+                <a href="../learn/signs/index.html">The Signs</a>
+                <a href="../learn/angles/index.html">Angles & Points</a>
+                <a href="../learn/patterns/index.html">Patterns</a>
+                <a href="../learn/aspects/index.html">Aspects</a>
+                <a href="../learn/aspects/natal/index.html">Planetary Aspects</a>
+                <a href="../learn/critical-degrees/index.html">Critical Degrees</a>
+            </div>
+            <div class="astro-dropdown-column">
+                <h4>Planets in Signs</h4>
+                <a href="../learn/planets/in-signs/sun/aries.html">Sun in Signs</a>
+                <a href="../learn/planets/in-signs/moon/aries.html">Moon in Signs</a>
+                <a href="../learn/planets/in-signs/mercury/aries.html">Mercury in Signs</a>
+                <a href="../learn/planets/in-signs/venus/aries.html">Venus in Signs</a>
+                <a href="../learn/planets/in-signs/mars/aries.html">Mars in Signs</a>
+                <a href="../learn/planets/in-signs/jupiter/aries.html">Jupiter in Signs</a>
+                <a href="../learn/planets/in-signs/saturn/aries.html">Saturn in Signs</a>
+            </div>
+            <div class="astro-dropdown-column">
+                <h4>Planets in Houses</h4>
+                <a href="../learn/planets/in-houses/sun/house1.html">Sun in Houses</a>
+                <a href="../learn/planets/in-houses/moon/house1.html">Moon in Houses</a>
+                <a href="../learn/planets/in-houses/mercury/house1.html">Mercury in Houses</a>
+                <a href="../learn/planets/in-houses/venus/house1.html">Venus in Houses</a>
+                <a href="../learn/planets/in-houses/mars/house1.html">Mars in Houses</a>
+                <a href="../learn/planets/in-houses/jupiter/house1.html">Jupiter in Houses</a>
+                <a href="../learn/planets/in-houses/saturn/house1.html">Saturn in Houses</a>
+            </div>
+            <div class="astro-dropdown-column">
+                <h4>Specialized</h4>
+                <a href="../learn/houses/index.html">Signs in Houses</a>
+                <a href="../tools/chart-calculator.html">Free Natal Chart</a>
+                <a href="../tools/horoscopes.html">Horoscopes</a>
+                <a href="../tools/synastry.html">Synastry Calculator</a>
+                <hr style="border: 0; border-top: 1px solid rgba(197,160,89,0.1); margin: 10px 0;">
+                <a href="../store/index.html" style="color: var(--gold-light);">Personalized Reports</a>
+            </div>
+        </div>
+    </li>
+    <li class="astro-nav-item astro-dropdown">
+        <a href="../learn/birthdays/index.html" class="astro-nav-link">Birthdays</a>
+        <div class="astro-dropdown-menu">
+            <a href="../learn/birthdays/january.html">January</a>
+            <a href="../learn/birthdays/february.html">February</a>
+            <a href="../learn/birthdays/march.html">March</a>
+            <a href="../learn/birthdays/april.html">April</a>
+            <a href="../learn/birthdays/may.html">May</a>
+            <a href="../learn/birthdays/june.html">June</a>
+            <a href="../learn/birthdays/july.html">July</a>
+            <a href="../learn/birthdays/august.html">August</a>
+            <a href="../learn/birthdays/september.html">September</a>
+            <a href="../learn/birthdays/october.html">October</a>
+            <a href="../learn/birthdays/november.html">November</a>
+            <a href="../learn/birthdays/december.html">December</a>
+        </div>
+    </li>
+    <li class="astro-nav-item astro-dropdown">
+        <a href="#" class="astro-nav-link">Reports</a>
+        <div class="astro-dropdown-menu">
+            <a href="../tools/chart-calculator.html">Free Natal Chart</a>
+            <a href="../tools/horoscopes.html">Horoscopes</a>
+            <a href="../tools/synastry.html">Synastry Calculator</a>
+            <hr style="border: 0; border-top: 1px solid rgba(197,160,89,0.1); margin: 10px 0;">
+            <a href="../services/natal-report.html">Natal Report</a>
+            <a href="../services/synastry-report.html">Synastry Report</a>
+            <a href="../services/healing.html">Healing Sessions</a>
+            <a href="../services/consultation.html">1-on-1 Consultation</a>
+            <a href="../services/birthday.html">Birthday Interpretation</a>
+        </div>
+    </li>
+    <li class="astro-nav-item astro-dropdown">
+        <a href="#" class="astro-nav-link">Reference</a>
+        <div class="astro-dropdown-menu">
+            <a href="../reference/transits.html">Major Transits</a>
+            <a href="../reference/resources.html">Resources</a>
+        </div>
+    </li>
+    <li class="astro-nav-item"><a href="../blog/index.html" class="astro-nav-link">Blog</a></li>
+    <li class="astro-nav-item"><a href="../about.html" class="astro-nav-link">About</a></li>
+    <li class="astro-nav-item"><a href="../store/index.html" class="astro-nav-link">Store</a></li>
+    <li class="astro-nav-item"><a href="index.html" class="astro-nav-link">Community</a></li>
+</ul>
+        </div>
+    </nav>
+
+    <header class="category-header py-5"
+        style="background: var(--purple-dark); border-bottom: 1px solid var(--gold-primary);">
+        <div class="astro-container text-center">
+            <h1 id="categoryTitle" class="display-4"
+                style="color: var(--gold-primary); font-family: var(--font-heading);">Category</h1>
+            <p id="categoryDesc" class="lead text-white-50">Browsing discussions...</p>
+        </div>
+    </header>
+
+    <section class="astro-container py-5">
+        <div class="forum-actions mb-4 d-flex justify-content-between align-items-center">
+            <div class="breadcrumb mb-0" style="background: none; padding: 0;">
+                <a href="index.html" style="color: var(--gold-light);">Forum</a>
+                <span class="mx-2" style="color: var(--purple-soft);">›</span>
+                <span id="breadcrumbCategory" style="color: var(--white-soft);">Category</span>
+            </div>
+            <a href="new-thread.html" class="btn btn-primary">Start New Thread</a>
+        </div>
+
+        <div id="threadList" class="thread-list">
+            <!-- Threads will be filtered and displayed here via JavaScript -->
+            <div class="text-center py-5">
+                <div class="spinner-border text-gold" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="astro-container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 AstroTheist. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+    <script src="forum.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const params = new URLSearchParams(window.location.search);
+            const catId = params.get('cat') || 'general';
+
+            const categories = {
+                'natal': { title: 'Natal Chart Discussion', desc: 'Share and discuss natal chart placements, patterns, and interpretations' },
+                'transits': { title: 'Transits & Forecasts', desc: 'Current transits, upcoming aspects, and their manifestations' },
+                'synastry': { title: 'Synastry & Relationships', desc: 'Compatibility, relationship dynamics, and composite charts' },
+                'learning': { title: 'Learning & Techniques', desc: 'Study resources, interpretation methods, and astrology education' },
+                'general': { title: 'General Discussion', desc: 'Off-topic conversations, introductions, and community chat' }
+            };
+
+            const catData = categories[catId] || categories['general'];
+            document.getElementById('categoryTitle').textContent = catData.title;
+            document.getElementById('categoryDesc').textContent = catData.desc;
+            document.getElementById('breadcrumbCategory').textContent = catData.title;
+
+            // Simple filter logic for demo
+            setTimeout(() => {
+                const threadList = document.getElementById('threadList');
+                threadList.innerHTML = ''; // Clear spinner
+
+                // We would ideally fetch from a list, but for demo we just show relevant placeholders or 'no threads found'
+                // In a real app, this would filter a JSON blob
+                if (catId === 'transits') {
+                    threadList.innerHTML = `
+                        <a href="thread-saturn-neptune.html" class="thread-item">
+                            <div class="thread-content">
+                                <h3>Saturn-Neptune conjunction - How are you feeling it?</h3>
+                                <div class="thread-meta"><span>👤 CosmicSeeker</span><span>🕐 2 hours ago</span></div>
+                            </div>
+                        </a>
+                        <a href="thread-pluto-aqua.html" class="thread-item">
+                            <div class="thread-content">
+                                <h3>Pluto in Aquarius - What changes have you noticed?</h3>
+                                <div class="thread-meta"><span>👤 TransitWatcher</span><span>🕐 2 days ago</span></div>
+                            </div>
+                        </a>
+                    `;
+                } else if (catId === 'synastry') {
+                    threadList.innerHTML = `
+                        <a href="thread-venus-mars.html" class="thread-item">
+                            <div class="thread-content">
+                                <h3>Venus-Mars synastry aspects - Share your experiences</h3>
+                                <div class="thread-meta"><span>👤 StarCrossed</span><span>🕐 1 day ago</span></div>
+                            </div>
+                        </a>
+                    `;
+                } else if (catId === 'natal') {
+                    threadList.innerHTML = `
+                        <a href="thread-chiron-7th.html" class="thread-item">
+                            <div class="thread-content">
+                                <h3>Chiron in 7th house - Healing through relationships?</h3>
+                                <div class="thread-meta"><span>👤 MoonChild88</span><span>🕐 5 hours ago</span></div>
+                            </div>
+                        </a>
+                    `;
+                } else if (catId === 'learning') {
+                    threadList.innerHTML = `
+                        <a href="thread-traditional-books.html" class="thread-item">
+                            <div class="thread-content">
+                                <h3>Best books for learning traditional astrology?</h3>
+                                <div class="thread-meta"><span>👤 AstroStudent</span><span>🕐 1 day ago</span></div>
+                            </div>
+                        </a>
+                    `;
+                } else {
+                    threadList.innerHTML = '<div class="text-center py-5"><p style="color: var(--purple-soft);">No threads found in this category yet. Be the first to start one!</p></div>';
+                }
+            }, 500);
+        });
+    </script>
+</body>
+
+</html>
