@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House Overlays in Synastry - AstroTheist</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../styles.css">
+    <style>
+        .house-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .house-card {
+            background: rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(197, 160, 89, 0.1);
+            padding: 2rem;
+            border-radius: 12px;
+            transition: transform 0.3s ease;
+        }
+
+        .house-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--gold-light);
+        }
+
+        .house-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: var(--gold-light);
+            margin-bottom: 1rem;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+        <nav class="astro-navbar">
+        <div class="astro-container astro-nav-container">
+            <a href="../../index.html" class="astro-logo">
+                <svg class="astro-logo-icon" viewBox="0 0 100 60" width="100" height="60">
+                    <circle cx="25" cy="40" r="1.5" fill="currentColor" />
+                    <circle cx="45" cy="35" r="1.5" fill="currentColor" />
+                    <circle cx="65" cy="20" r="2.5" fill="currentColor" />
+                    <circle cx="85" cy="30" r="1.5" fill="currentColor" />
+                    <circle cx="35" cy="50" r="1.5" fill="currentColor" />
+                    <path d="M25 40 L45 35 L65 20 L85 30 M45 35 L35 50" stroke="currentColor" stroke-width="0.5"
+                        fill="none" opacity="0.6" />
+                    <path d="M65 20 L65 10 M60 20 L70 20" stroke="currentColor" stroke-width="0.5" fill="none" />
+                </svg>
+                <span class="astro-logo-text">astrotheist</span>
+            </a>
+            <button class="astro-mobile-menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="astro-nav-menu">
+                <li class="astro-nav-item astro-dropdown">
+                    <a href="#" class="astro-nav-link">Learn</a>
+                    <div class="astro-dropdown-menu astro-dropdown-mega">
+                        <div class="astro-dropdown-column">
+                            <h4>Core Wisdom</h4>
+                            <a href="../../learn/planets/index.html">The Planets</a>
+                            <a href="../../learn/houses/index.html">The Houses</a>
+                            <a href="../../learn/signs/index.html">The Signs</a>
+                            <a href="../../learn/angles/index.html">Angles & Points</a>
+                            <a href="../../learn/patterns/index.html">Patterns</a>
+                            <a href="../../learn/aspects/index.html">Aspects</a>
+                        </div>
+                        <div class="astro-dropdown-column">
+                            <h4>Personal Placements</h4>
+                            <a href="../../learn/planets/in-signs/sun/aries.html">Planets in Signs</a>
+                            <a href="../../learn/planets/in-houses/sun/house1.html">Planets in Houses</a>
+                            <a href="../../learn/houses/index.html">Signs in Houses</a>
+                            <a href="../../learn/aspects/natal/index.html">Aspect Patterns</a>
+                            <a href="../../learn/critical-degrees/index.html">Critical Degrees</a>
+                        </div>
+                        <div class="astro-dropdown-column">
+                            <h4>Compatibility</h4>
+                            <a href="../../learn/synastry/index.html"
+                                style="color: var(--gold-light); font-weight: 600;">Synastry Guide</a>
+                            <a href="../../learn/synastry/aspects.html">Synastry Aspects</a>
+                            <a href="../../learn/synastry/house-overlays.html">House Overlays</a>
+                            <a href="../../learn/synastry/karma-and-nodes.html">Karma & Nodes</a>
+                            <a href="../../learn/synastry/composite-charts.html">Composite Charts</a>
+                        </div>
+                        <div class="astro-dropdown-column">
+                            <h4>Tools & Services</h4>
+                            <a href="../../tools/chart-calculator.html">Free Natal Chart</a>
+                            <a href="../../tools/horoscopes.html">Daily Horoscopes</a>
+                            <a href="../../tools/synastry.html">Synastry Calculator</a>
+                            <hr style="border: 0; border-top: 1px solid rgba(197,160,89,0.1); margin: 10px 0;">
+                            <a href="../../store/index.html" style="color: var(--gold-light);">Personalized Reports</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="astro-nav-item astro-dropdown">
+                    <a href="../../learn/birthdays/index.html" class="astro-nav-link">Birthdays</a>
+                    <div class="astro-dropdown-menu">
+                        <a href="../../learn/birthdays/january.html">January</a>
+                        <a href="../../learn/birthdays/february.html">February</a>
+                        <a href="../../learn/birthdays/march.html">March</a>
+                        <a href="../../learn/birthdays/april.html">April</a>
+                        <a href="../../learn/birthdays/may.html">May</a>
+                        <a href="../../learn/birthdays/june.html">June</a>
+                        <a href="../../learn/birthdays/july.html">July</a>
+                        <a href="../../learn/birthdays/august.html">August</a>
+                        <a href="../../learn/birthdays/september.html">September</a>
+                        <a href="../../learn/birthdays/october.html">October</a>
+                        <a href="../../learn/birthdays/november.html">November</a>
+                        <a href="../../learn/birthdays/december.html">December</a>
+                    </div>
+                </li>
+                <li class="astro-nav-item astro-dropdown">
+                    <a href="#" class="astro-nav-link">Reports</a>
+                    <div class="astro-dropdown-menu">
+                        <a href="../../tools/chart-calculator.html">Free Natal Chart</a>
+                        <a href="../../tools/horoscopes.html">Horoscopes</a>
+                        <a href="../../tools/synastry.html">Synastry Calculator</a>
+                        <hr style="border: 0; border-top: 1px solid rgba(197,160,89,0.1); margin: 10px 0;">
+                        <a href="../../services/natal-report.html">Natal Report</a>
+                        <a href="../../services/synastry-report.html">Synastry Report</a>
+                        <a href="../../services/healing.html">Healing Sessions</a>
+                        <a href="../../services/consultation.html">1-on-1 Consultation</a>
+                        <a href="../../services/birthday.html">Birthday Interpretation</a>
+                    </div>
+                </li>
+                <li class="astro-nav-item astro-dropdown">
+                    <a href="#" class="astro-nav-link">Reference</a>
+                    <div class="astro-dropdown-menu">
+                        <a href="../../reference/transits.html">Major Transits</a>
+                        <a href="../../reference/resources.html">Resources</a>
+                    </div>
+                </li>
+                <li class="astro-nav-item"><a href="../../blog/index.html" class="astro-nav-link">Blog</a></li>
+                <li class="astro-nav-item"><a href="../../about.html" class="astro-nav-link">About</a></li>
+                <li class="astro-nav-item"><a href="../../store/index.html" class="astro-nav-link">Store</a></li>
+                <li class="astro-nav-item"><a href="../../community/index.html" class="astro-nav-link">Community</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="astro-container py-5">
+        <h1 class="hero-title text-center pt-5">House Overlays</h1>
+        <p class="lead text-center">Where your planets light up their life areas.</p>
+
+        <div class="house-grid">
+            <a href="houses/1st.html" class="house-card" style="text-decoration: none; color: inherit; display: block;">
+                <span class="house-number">1st</span>
+                <h3>The House of Self</h3>
+                <p>When someone's planets fall in your 1st house, there is an immediate, visceral impact. You feel their
+                    energy physically. This overlay creates <strong>instant recognition</strong>. If their Sun is here,
+                    they "shine" directly on you, making you feel seen and energized. If their Saturn is here, you
+                    might feel judged or restricted by their presence. The Planet person is often very focused on the
+                    House person's appearance and personality.</p>
+            </a>
+            <a href="houses/2nd.html" class="house-card" style="text-decoration: none; color: inherit; display: block;">
+                <span class="house-number">2nd</span>
+                <h3>The House of Values</h3>
+                <p>This overlay shifts the focus to <strong>security, money, and self-worth</strong>. It is common in
+                    long-term marriages where shared resources are key. The House person may feel that the Planet
+                    person is a "resource" or brings stability. Conversely, if Mars is here, they might argue about
+                    spending. It’s a very grounded, practical connection that determines if you can actually build a
+                    life together.</p>
+            </a>
+            <a href="houses/3rd.html" class="house-card" style="text-decoration: none; color: inherit; display: block;">
+                <span class="house-number">3rd</span>
+                <h3>The House of Communication</h3>
+                <p>The "Best Friend" overlay. Planets here stimulate <strong>intellectual curiosity and
+                        conversation</strong>. You likely share similar hobbies or ways of thinking. The House person
+                    finds the Planet person easy to talk to and may feel like they are "siblings" in spirit. Great
+                    for mental rapport and keeping the relationship interesting through dialogue and short trips.</p>
+            </a>
+            <a href="houses/4th.html" class="house-card" style="text-decoration: none; color: inherit; display: block;">
+                <span class="house-number">4th</span>
+                <h3>The House of Home</h3>
+                <p>A deep, <strong>psychological and domestic bond</strong>. You feel like family almost instantly.
+                    This is the "living together" overlay. The House person feels a sense of safety and "at-home-ness"
+                    with the Planet person. However, since the 4th house represents our roots and childhood, this
+                    overlay can also trigger old family dynamics and early-life patterns that need healing.</p>
+            </a>
+            <a href="houses/5th.html" class="house-card" style="text-decoration: none; color: inherit; display: block;">
+                <span class="house-number">5th</span>
+                <h3>The House of Pleasure</h3>
+                <p>The "Romance and Dating" overlay. This creates <strong>playfulness, creativity, and sexual
+                        chemistry</strong>. The House person sees the Planet person as someone they can have fun
+                    with. If your partner's Sun or Venus falls in your 5th, you likely find them incredibly attractive
+                    and enjoyable to be around. It is the signature of the "honeymoon phase" and shared joy.</p>
+            </a>
+            <a href="houses/6th.html" class="house-card" style="text-decoration: none; color: inherit; display: block;">
+                <span class="house-number">6th</span>
+                <h3>The House of Service</h3>
+                <p>The "Daily Grind" overlay. This is about <strong>routines, work, and health</strong>. It might not
+                    sound romantic, but it’s essential for functional relationships. The Planet person helps the House
+                    person with their chores or health habits. If poorly aspected, the House person can feel like a
+                    "servant" to the Planet person, or that the Planet person is too critical of their lifestyle.</p>
+            </a>
+            <a href="houses/7th.html" class="house-card" style="text-decoration: none; color: inherit; display: block;">
+                <span class="house-number">7th</span>
+                <h3>The House of Partnership</h3>
+                <p>The classic indicator for <strong>one-on-one commitment and marriage</strong>. The House person
+                    views the Planet person as the ideal "Significant Other." There is a natural pull toward
+                    cooperation and legally binding unions. You "fit" together in the way a traditional partnership
+                    requires. The Planet person feels a strong urge to partner up with the House person specifically.
+                </p>
+            </a>
+            <a href="houses/8th.html" class="house-card" style="text-decoration: none; color: inherit; display: block;">
+                <span class="house-number">8th</span>
+                <h3>The House of Intimacy</h3>
+                <p>Intense, <strong>transformative, and soul-merging</strong>. This house governs shared finances, sex,
+                    and deep psychological work. When planets fall here, the relationship is rarely "casual." You
+                    trigger each other's deepest fears and desires. The House person may feel "possessed" or
+                    profoundly changed by the Planet person. A very magnetic but potentially volatile connection.
+                </p>
+            </a>
+            <a href="houses/9th.html" class="house-card" style="text-decoration: none; color: inherit; display: block;">
+                <span class="house-number">9th</span>
+                <h3>The House of Wisdom</h3>
+                <p>The "Teacher and Explorer" overlay. Planets here encourage <strong>growth, travel, and
+                        philosophy</strong>. The House person views the Planet person as an inspiration or a guide.
+                    You likely enjoy traveling together or debating big life questions. It’s a relationship that
+                    expands your horizons and helps you see the "big picture" of your life path.</p>
+            </a>
+            <a href="houses/10th.html" class="house-card"
+                style="text-decoration: none; color: inherit; display: block;">
+                <span class="house-number">10th</span>
+                <h3>The House of Status</h3>
+                <p>The "Power Couple" overlay. This is about <strong>public image, career, and reputation</strong>.
+                    The Planet person often helps the House person achieve their goals or status. The House person
+                    respects the Planet person and may see them as an authority figure. It is an excellent overlay
+                    for business partners or couples who want to build a public legacy together.</p>
+            </a>
+            <a href="houses/11th.html" class="house-card"
+                style="text-decoration: none; color: inherit; display: block;">
+                <span class="house-number">11th</span>
+                <h3>The House of Community</h3>
+                <p>The "Friendship and Hopes" overlay. This creates a <strong>shared vision for the future</strong>.
+                    You likely share the same social circles and long-term goals. The House person feels like the
+                    Planet person is "on their team" and supports their dreams. It’s a socially-oriented connection
+                    that keeps the relationship from becoming too insular.</p>
+            </a>
+            <a href="houses/12th.html" class="house-card"
+                style="text-decoration: none; color: inherit; display: block;">
+                <span class="house-number">12th</span>
+                <h3>The House of the Unconscious</h3>
+                <p>The "Deep Psychic" overlay. This involves <strong>unspoken bonds, secrets, and spiritual
+                        dissolution</strong>. The House person may feel that the Planet person can "see" their
+                    hidden parts. It can be incredibly romantic and ethereal, or it can feel elusive and confusing.
+                    There is often a sense of "karmic debt" or a mission to heal each other in ways that are hard to
+                    put into words.</p>
+            </a>
+        </div>
+    </div>
+</body>
+
+</html>

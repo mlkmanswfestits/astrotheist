@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inter-planetary Aspects in Synastry - AstroTheist</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../styles.css">
+    <style>
+        .aspect-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            background: rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(197, 160, 89, 0.2);
+            border-radius: 12px;
+            overflow: hidden;
+            margin: 2rem 0;
+        }
+
+        .aspect-table th,
+        .aspect-table td {
+            padding: 1.5rem;
+            border-bottom: 1px solid rgba(197, 160, 89, 0.1);
+        }
+
+        .aspect-table th {
+            background: rgba(197, 160, 89, 0.1);
+            color: var(--gold-light);
+            text-align: left;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .aspect-tag {
+            display: inline-block;
+            padding: 0.3rem 0.8rem;
+            border-radius: 40px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .tag-harmonious {
+            background: rgba(46, 204, 113, 0.2);
+            color: #2ecc71;
+        }
+
+        .tag-dynamic {
+            background: rgba(231, 76, 60, 0.2);
+            color: #e74c3c;
+        }
+
+        .tag-karmic {
+            background: rgba(155, 89, 182, 0.2);
+            color: #9b59b6;
+        }
+    </style>
+</head>
+
+<body>
+        <nav class="astro-navbar">
+        <div class="astro-container astro-nav-container">
+            <a href="../../index.html" class="astro-logo">
+                <svg class="astro-logo-icon" viewBox="0 0 100 60" width="100" height="60">
+                    <circle cx="25" cy="40" r="1.5" fill="currentColor" />
+                    <circle cx="45" cy="35" r="1.5" fill="currentColor" />
+                    <circle cx="65" cy="20" r="2.5" fill="currentColor" />
+                    <circle cx="85" cy="30" r="1.5" fill="currentColor" />
+                    <circle cx="35" cy="50" r="1.5" fill="currentColor" />
+                    <path d="M25 40 L45 35 L65 20 L85 30 M45 35 L35 50" stroke="currentColor" stroke-width="0.5"
+                        fill="none" opacity="0.6" />
+                    <path d="M65 20 L65 10 M60 20 L70 20" stroke="currentColor" stroke-width="0.5" fill="none" />
+                </svg>
+                <span class="astro-logo-text">astrotheist</span>
+            </a>
+            <button class="astro-mobile-menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="astro-nav-menu">
+                <li class="astro-nav-item astro-dropdown">
+                    <a href="#" class="astro-nav-link">Learn</a>
+                    <div class="astro-dropdown-menu astro-dropdown-mega">
+                        <div class="astro-dropdown-column">
+                            <h4>Core Wisdom</h4>
+                            <a href="../../learn/planets/index.html">The Planets</a>
+                            <a href="../../learn/houses/index.html">The Houses</a>
+                            <a href="../../learn/signs/index.html">The Signs</a>
+                            <a href="../../learn/angles/index.html">Angles & Points</a>
+                            <a href="../../learn/patterns/index.html">Patterns</a>
+                            <a href="../../learn/aspects/index.html">Aspects</a>
+                        </div>
+                        <div class="astro-dropdown-column">
+                            <h4>Personal Placements</h4>
+                            <a href="../../learn/planets/in-signs/sun/aries.html">Planets in Signs</a>
+                            <a href="../../learn/planets/in-houses/sun/house1.html">Planets in Houses</a>
+                            <a href="../../learn/houses/index.html">Signs in Houses</a>
+                            <a href="../../learn/aspects/natal/index.html">Aspect Patterns</a>
+                            <a href="../../learn/critical-degrees/index.html">Critical Degrees</a>
+                        </div>
+                        <div class="astro-dropdown-column">
+                            <h4>Compatibility</h4>
+                            <a href="../../learn/synastry/index.html"
+                                style="color: var(--gold-light); font-weight: 600;">Synastry Guide</a>
+                            <a href="../../learn/synastry/aspects.html">Synastry Aspects</a>
+                            <a href="../../learn/synastry/house-overlays.html">House Overlays</a>
+                            <a href="../../learn/synastry/karma-and-nodes.html">Karma & Nodes</a>
+                            <a href="../../learn/synastry/composite-charts.html">Composite Charts</a>
+                        </div>
+                        <div class="astro-dropdown-column">
+                            <h4>Tools & Services</h4>
+                            <a href="../../tools/chart-calculator.html">Free Natal Chart</a>
+                            <a href="../../tools/horoscopes.html">Daily Horoscopes</a>
+                            <a href="../../tools/synastry.html">Synastry Calculator</a>
+                            <hr style="border: 0; border-top: 1px solid rgba(197,160,89,0.1); margin: 10px 0;">
+                            <a href="../../store/index.html" style="color: var(--gold-light);">Personalized Reports</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="astro-nav-item astro-dropdown">
+                    <a href="../../learn/birthdays/index.html" class="astro-nav-link">Birthdays</a>
+                    <div class="astro-dropdown-menu">
+                        <a href="../../learn/birthdays/january.html">January</a>
+                        <a href="../../learn/birthdays/february.html">February</a>
+                        <a href="../../learn/birthdays/march.html">March</a>
+                        <a href="../../learn/birthdays/april.html">April</a>
+                        <a href="../../learn/birthdays/may.html">May</a>
+                        <a href="../../learn/birthdays/june.html">June</a>
+                        <a href="../../learn/birthdays/july.html">July</a>
+                        <a href="../../learn/birthdays/august.html">August</a>
+                        <a href="../../learn/birthdays/september.html">September</a>
+                        <a href="../../learn/birthdays/october.html">October</a>
+                        <a href="../../learn/birthdays/november.html">November</a>
+                        <a href="../../learn/birthdays/december.html">December</a>
+                    </div>
+                </li>
+                <li class="astro-nav-item astro-dropdown">
+                    <a href="#" class="astro-nav-link">Reports</a>
+                    <div class="astro-dropdown-menu">
+                        <a href="../../tools/chart-calculator.html">Free Natal Chart</a>
+                        <a href="../../tools/horoscopes.html">Horoscopes</a>
+                        <a href="../../tools/synastry.html">Synastry Calculator</a>
+                        <hr style="border: 0; border-top: 1px solid rgba(197,160,89,0.1); margin: 10px 0;">
+                        <a href="../../services/natal-report.html">Natal Report</a>
+                        <a href="../../services/synastry-report.html">Synastry Report</a>
+                        <a href="../../services/healing.html">Healing Sessions</a>
+                        <a href="../../services/consultation.html">1-on-1 Consultation</a>
+                        <a href="../../services/birthday.html">Birthday Interpretation</a>
+                    </div>
+                </li>
+                <li class="astro-nav-item astro-dropdown">
+                    <a href="#" class="astro-nav-link">Reference</a>
+                    <div class="astro-dropdown-menu">
+                        <a href="../../reference/transits.html">Major Transits</a>
+                        <a href="../../reference/resources.html">Resources</a>
+                    </div>
+                </li>
+                <li class="astro-nav-item"><a href="../../blog/index.html" class="astro-nav-link">Blog</a></li>
+                <li class="astro-nav-item"><a href="../../about.html" class="astro-nav-link">About</a></li>
+                <li class="astro-nav-item"><a href="../../store/index.html" class="astro-nav-link">Store</a></li>
+                <li class="astro-nav-item"><a href="../../community/index.html" class="astro-nav-link">Community</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="astro-container py-5">
+        <h1 class="hero-title text-center pt-5">Synastry Aspects</h1>
+        <p class="lead text-center mb-5">The geometric language of relationship chemistry.</p>
+
+        <div class="row">
+            <div class="col-12">
+                <table class="aspect-table">
+                    <thead>
+                        <tr>
+                            <th>Inter-Aspect</th>
+                            <th>Description</th>
+                            <th>The Experience</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <span class="aspect-tag tag-harmonious">Sun-Moon</span>
+                                <div>Conjunction / Trine</div>
+                            </td>
+                            <td>The "Marriage Aspect." The core identity (Sun) aligns with the emotional needs (Moon).
+                            </td>
+                            <td>A sense of natural belonging and mutual support. One person "shines" while the other
+                                provides a "home."</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="aspect-tag tag-harmonious">Sun-Moon</span>
+                                <div>Conjunction / Trine / Sextile</div>
+                            </td>
+                            <td>The "Marriage Aspect." The core identity (Sun) aligns with the emotional needs (Moon).
+                            </td>
+                            <td>A sense of natural belonging and mutual support. One person "shines" while the other
+                                provides an emotional "home." The foundation of long-term cohabitation.</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="aspect-tag tag-dynamic">Sun-Moon</span>
+                                <div>Square / Opposition</div>
+                            </td>
+                            <td>Internal vs. External needs. The conscious goals of one clash with the emotional habits
+                                of the other.</td>
+                            <td>Tension between "who we are" and "what we need to feel safe." Requires conscious
+                                negotiation to avoid emotional drain.</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="aspect-tag tag-harmonious">Moon-Moon</span>
+                                <div>Conjunction / Trine</div>
+                            </td>
+                            <td>Emotional Resonance. Sharing the same "inner weather."</td>
+                            <td>Intuitive understanding of moods. Similar domestic habits and ways of nurturing.
+                                "Soulmate" comfort.</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="aspect-tag tag-dynamic">Mercury-Mercury</span>
+                                <div>Square / Opposition</div>
+                            </td>
+                            <td>Mental Friction. Different processing speeds or communication styles.</td>
+                            <td>Frequent misunderstandings. One person thinks linearly while the other thinks
+                                intuitively. "We speak different languages."</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="aspect-tag tag-harmonious">Venus-Venus</span>
+                                <div>Trine / Sextile</div>
+                            </td>
+                            <td>Shared Values. Similar tastes in art, luxury, and social interaction.</td>
+                            <td>Natural agreement on how to spend money and relax. Harmonious social life and aesthetic
+                                preferences.</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="aspect-tag tag-dynamic">Venus-Mars</span>
+                                <div>Conjunction / Square / Opposition</div>
+                            </td>
+                            <td>Classic erotic attraction. The "Lover-Warrior" dynamic.</td>
+                            <td>High erotic charge and pursuit. Squares create intense, sometimes volatile friction that
+                                keeps the spark alive through "creative tension."</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="aspect-tag tag-harmonious">Mars-Mars</span>
+                                <div>Trine / Sextile</div>
+                            </td>
+                            <td>Synchronized Energy. How you get things done together.</td>
+                            <td>Efficient teamwork. Similar sex drive and physical activity levels. Playing on the "same
+                                team."</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="aspect-tag tag-karmic">Saturn-Sun</span>
+                                <div>Conjunction / Square</div>
+                            </td>
+                            <td>The Stabilizer or the Critic. Saturn brings the weight of reality to the Sun person.
+                            </td>
+                            <td>Initially feels like "the one who keeps me grounded." Later can feel like "the one who
+                                judges me." Essential for duration through commitment.</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="aspect-tag tag-karmic">Saturn-Moon</span>
+                                <div>Conjunction / Square</div>
+                            </td>
+                            <td>Emotional Responsibility. The "Parent-Child" shadow.</td>
+                            <td>The Saturn person provides structure for the Moon person’s emotions, but can also dampen
+                                their emotional expression. A very "heavy" binding chord.</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="aspect-tag tag-dynamic">Uranus-Venus</span>
+                                <div>Conjunction / Opposition</div>
+                            </td>
+                            <td>The Electric Spark. Sudden, unconventional, or unstable love.</td>
+                            <td>Love at first sight. Unusual relationship structures. High excitement but prone to
+                                "ghosting" or sudden endings if space isn't maintained.</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="aspect-tag tag-harmonious">Neptune-Sun</span>
+                                <div>Trine / Sextile</div>
+                            </td>
+                            <td>Spiritual Muse. Idealization and divine connection.</td>
+                            <td>Feeling "meant to be" in a spiritual sense. Deep empathy and psychic connection. A
+                                beautiful, "gentle" bond.</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="aspect-tag tag-dynamic">Pluto-Moon</span>
+                                <div>Conjunction / Square / Opposition</div>
+                            </td>
+                            <td>Psychological Depth-Charge. Emotional intensity and rebirth.</td>
+                            <td>Deeply transformative. Can lead to "emotional possession" and power struggles. Triggers
+                                early childhood wounds for healing.</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="aspect-tag tag-karmic">North Node-Sun</span>
+                                <div>Conjunction</div>
+                            </td>
+                            <td>Destined Growth. The Sun person illuminates the Node person's future path.</td>
+                            <td>Feeling that the relationship is pulling you toward your higher purpose. A "fated"
+                                catalyst for life changes.</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="aspect-tag tag-karmic">South Node-Moon</span>
+                                <div>Conjunction</div>
+                            </td>
+                            <td>Past Life Familiarity. Emotional comfort that spans lifetimes.</td>
+                            <td>"I've known you forever." Immediate trust and safety. Risk of staying in the "comfort
+                                zone" and not evolving.</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="aspect-tag tag-dynamic">Lilith-Venus</span>
+                                <div>Conjunction / Opposition</div>
+                            </td>
+                            <td>Raw Magnetism. The forbidden or untamed attraction.</td>
+                            <td>Magnetic, primal draw that often breaks social norms. Can be obsessive, dark, and deeply
+                                intoxicating.</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="aspect-tag tag-harmonious">Jupiter-Sun</span>
+                                <div>Conjunction / Trine</div>
+                            </td>
+                            <td>The Great Benefic. Expansion, luck, and shared joy.</td>
+                            <td>One person naturally "lifts" the other. Optimism, travel, and mutual growth. A very
+                                "lucky" connection for abundance.</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="aspect-tag tag-dynamic">Chiron-Venus</span>
+                                <div>Any Major Aspect</div>
+                            </td>
+                            <td>The Wounded Healer. Love that triggers old hurts to fix them.</td>
+                            <td>Relationship that feels like "healing work." Deep vulnerability. One person may play the
+                                "healer" role for the other’s romantic wounds.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Composite Charts: The Third Entity - AstroTheist</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body>
+        <nav class="astro-navbar">
+        <div class="astro-container astro-nav-container">
+            <a href="../../index.html" class="astro-logo">
+                <svg class="astro-logo-icon" viewBox="0 0 100 60" width="100" height="60">
+                    <circle cx="25" cy="40" r="1.5" fill="currentColor" />
+                    <circle cx="45" cy="35" r="1.5" fill="currentColor" />
+                    <circle cx="65" cy="20" r="2.5" fill="currentColor" />
+                    <circle cx="85" cy="30" r="1.5" fill="currentColor" />
+                    <circle cx="35" cy="50" r="1.5" fill="currentColor" />
+                    <path d="M25 40 L45 35 L65 20 L85 30 M45 35 L35 50" stroke="currentColor" stroke-width="0.5"
+                        fill="none" opacity="0.6" />
+                    <path d="M65 20 L65 10 M60 20 L70 20" stroke="currentColor" stroke-width="0.5" fill="none" />
+                </svg>
+                <span class="astro-logo-text">astrotheist</span>
+            </a>
+            <button class="astro-mobile-menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="astro-nav-menu">
+                <li class="astro-nav-item astro-dropdown">
+                    <a href="#" class="astro-nav-link">Learn</a>
+                    <div class="astro-dropdown-menu astro-dropdown-mega">
+                        <div class="astro-dropdown-column">
+                            <h4>Core Wisdom</h4>
+                            <a href="../../learn/planets/index.html">The Planets</a>
+                            <a href="../../learn/houses/index.html">The Houses</a>
+                            <a href="../../learn/signs/index.html">The Signs</a>
+                            <a href="../../learn/angles/index.html">Angles & Points</a>
+                            <a href="../../learn/patterns/index.html">Patterns</a>
+                            <a href="../../learn/aspects/index.html">Aspects</a>
+                        </div>
+                        <div class="astro-dropdown-column">
+                            <h4>Personal Placements</h4>
+                            <a href="../../learn/planets/in-signs/sun/aries.html">Planets in Signs</a>
+                            <a href="../../learn/planets/in-houses/sun/house1.html">Planets in Houses</a>
+                            <a href="../../learn/houses/index.html">Signs in Houses</a>
+                            <a href="../../learn/aspects/natal/index.html">Aspect Patterns</a>
+                            <a href="../../learn/critical-degrees/index.html">Critical Degrees</a>
+                        </div>
+                        <div class="astro-dropdown-column">
+                            <h4>Compatibility</h4>
+                            <a href="../../learn/synastry/index.html"
+                                style="color: var(--gold-light); font-weight: 600;">Synastry Guide</a>
+                            <a href="../../learn/synastry/aspects.html">Synastry Aspects</a>
+                            <a href="../../learn/synastry/house-overlays.html">House Overlays</a>
+                            <a href="../../learn/synastry/karma-and-nodes.html">Karma & Nodes</a>
+                            <a href="../../learn/synastry/composite-charts.html">Composite Charts</a>
+                        </div>
+                        <div class="astro-dropdown-column">
+                            <h4>Tools & Services</h4>
+                            <a href="../../tools/chart-calculator.html">Free Natal Chart</a>
+                            <a href="../../tools/horoscopes.html">Daily Horoscopes</a>
+                            <a href="../../tools/synastry.html">Synastry Calculator</a>
+                            <hr style="border: 0; border-top: 1px solid rgba(197,160,89,0.1); margin: 10px 0;">
+                            <a href="../../store/index.html" style="color: var(--gold-light);">Personalized Reports</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="astro-nav-item astro-dropdown">
+                    <a href="../../learn/birthdays/index.html" class="astro-nav-link">Birthdays</a>
+                    <div class="astro-dropdown-menu">
+                        <a href="../../learn/birthdays/january.html">January</a>
+                        <a href="../../learn/birthdays/february.html">February</a>
+                        <a href="../../learn/birthdays/march.html">March</a>
+                        <a href="../../learn/birthdays/april.html">April</a>
+                        <a href="../../learn/birthdays/may.html">May</a>
+                        <a href="../../learn/birthdays/june.html">June</a>
+                        <a href="../../learn/birthdays/july.html">July</a>
+                        <a href="../../learn/birthdays/august.html">August</a>
+                        <a href="../../learn/birthdays/september.html">September</a>
+                        <a href="../../learn/birthdays/october.html">October</a>
+                        <a href="../../learn/birthdays/november.html">November</a>
+                        <a href="../../learn/birthdays/december.html">December</a>
+                    </div>
+                </li>
+                <li class="astro-nav-item astro-dropdown">
+                    <a href="#" class="astro-nav-link">Reports</a>
+                    <div class="astro-dropdown-menu">
+                        <a href="../../tools/chart-calculator.html">Free Natal Chart</a>
+                        <a href="../../tools/horoscopes.html">Horoscopes</a>
+                        <a href="../../tools/synastry.html">Synastry Calculator</a>
+                        <hr style="border: 0; border-top: 1px solid rgba(197,160,89,0.1); margin: 10px 0;">
+                        <a href="../../services/natal-report.html">Natal Report</a>
+                        <a href="../../services/synastry-report.html">Synastry Report</a>
+                        <a href="../../services/healing.html">Healing Sessions</a>
+                        <a href="../../services/consultation.html">1-on-1 Consultation</a>
+                        <a href="../../services/birthday.html">Birthday Interpretation</a>
+                    </div>
+                </li>
+                <li class="astro-nav-item astro-dropdown">
+                    <a href="#" class="astro-nav-link">Reference</a>
+                    <div class="astro-dropdown-menu">
+                        <a href="../../reference/transits.html">Major Transits</a>
+                        <a href="../../reference/resources.html">Resources</a>
+                    </div>
+                </li>
+                <li class="astro-nav-item"><a href="../../blog/index.html" class="astro-nav-link">Blog</a></li>
+                <li class="astro-nav-item"><a href="../../about.html" class="astro-nav-link">About</a></li>
+                <li class="astro-nav-item"><a href="../../store/index.html" class="astro-nav-link">Store</a></li>
+                <li class="astro-nav-item"><a href="../../community/index.html" class="astro-nav-link">Community</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="astro-container py-5">
+        <h1 class="hero-title text-center pt-5">Composite Charts</h1>
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <p class="lead">The Composite Chart is not you. It is not them. It is **The Relationship** as a third,
+                    independent living entity.</p>
+
+                <h3>1. The Mechanics: Midpoints vs. Davison</h3>
+                <p>There are two primary ways to calculate a relationship chart, and both offer unique insights:</p>
+                <ul>
+                    <li><strong>The Midpoint Method (Standard Composite):</strong> This is a mathematical abstraction.
+                        It
+                        takes the mathematical midpoint between your Sun and theirs, your Moon and theirs, and so on. It
+                        is not a "real" chart of a moment in time, but a symbolic map of the relationship's
+                        <strong>inner core</strong>. It is the most common method used by professional astrologers
+                        today.
+                    </li>
+                    <li><strong>The Davison Chart:</strong> This method finds the exact midpoint in time and space
+                        between
+                        the two births. It creates a "real" birth chart for the relationship, which can then be read
+                        like
+                        a natal chart, complete with its own transits and progressions. Many find the Davison more
+                        reliable for <strong>predictive timing</strong>.</li>
+                </ul>
+
+                <h3>2. Planetary Placements in the Composite</h3>
+                <p>The planets in the composite chart tell us the "how" and "what" of the relationship:</p>
+                <ul>
+                    <li><strong>Composite Sun:</strong> The fuel and identity of the union. A 1st house Sun makes the
+                        relationship highly visible; a 12th house Sun may mean the relationship is kept secret or is
+                        highly
+                        private.</li>
+                    <li><strong>Composite Moon:</strong> The emotional rhythm and "nesting" habits. If the composite
+                        Moon
+                        is in a hard aspect to Saturn, the relationship may feel emotionally dry or heavy, regardless of
+                        how much the individuals love each other.</li>
+                    <li><strong>Composite Mercury:</strong> The dialogue. A strong Mercury in the composite is often the
+                        reason couples can talk through any crisis.</li>
+                    <li><strong>Composite Venus:</strong> What the relationship values and how it expresses affection.
+                        In the 2nd house, the relationship may be focused on physical comfort and wealth.</li>
+                </ul>
+
+                <h3>3. Key House Overlays</h3>
+                <p>Where the action happens. The most prominent houses in a composite chart determine the
+                    relationship's <strong>raison d'être</strong>:</p>
+                <ul>
+                    <li><strong>1st/5th/7th/8th Houses:</strong> These are the "Relationship Houses." If the majority of
+                        planets are here, the couple is focused on the connection itself. It feels romantic,
+                        erotic, and partnered.</li>
+                    <li><strong>2nd/6th/10th Houses:</strong> These are the "Work Houses." If the composite is
+                        emphasized here, the couple may feel more like <strong>business partners</strong> or a
+                        unit that gets a lot of practical things done. This is excellent for stability but can
+                        sometimes feel "all work and no play."</li>
+                    <li><strong>Angular Houses (1, 4, 7, 10):</strong> These are the most powerful. Any planet on a
+                        composite angle becomes a defining characteristic of the union that the world will notice.</li>
+                </ul>
+
+                <div class="highlight-box" style="margin-top: 2rem;">
+                    <h3>The Final Synthesis</h3>
+                    <p>A relationship with "bad synastry" but a "good composite" can be a very successful, long-term
+                        business or marriage where the two people build something great even if they rub each other the
+                        wrong way personally. Conversely, great synastry with a chaotic composite can feel like a
+                        "lightning strike" romance that has nowhere to go.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

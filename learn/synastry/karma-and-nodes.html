@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karma & Nodes in Synastry - AstroTheist</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body>
+        <nav class="astro-navbar">
+        <div class="astro-container astro-nav-container">
+            <a href="../../index.html" class="astro-logo">
+                <svg class="astro-logo-icon" viewBox="0 0 100 60" width="100" height="60">
+                    <circle cx="25" cy="40" r="1.5" fill="currentColor" />
+                    <circle cx="45" cy="35" r="1.5" fill="currentColor" />
+                    <circle cx="65" cy="20" r="2.5" fill="currentColor" />
+                    <circle cx="85" cy="30" r="1.5" fill="currentColor" />
+                    <circle cx="35" cy="50" r="1.5" fill="currentColor" />
+                    <path d="M25 40 L45 35 L65 20 L85 30 M45 35 L35 50" stroke="currentColor" stroke-width="0.5"
+                        fill="none" opacity="0.6" />
+                    <path d="M65 20 L65 10 M60 20 L70 20" stroke="currentColor" stroke-width="0.5" fill="none" />
+                </svg>
+                <span class="astro-logo-text">astrotheist</span>
+            </a>
+            <button class="astro-mobile-menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="astro-nav-menu">
+                <li class="astro-nav-item astro-dropdown">
+                    <a href="#" class="astro-nav-link">Learn</a>
+                    <div class="astro-dropdown-menu astro-dropdown-mega">
+                        <div class="astro-dropdown-column">
+                            <h4>Core Wisdom</h4>
+                            <a href="../../learn/planets/index.html">The Planets</a>
+                            <a href="../../learn/houses/index.html">The Houses</a>
+                            <a href="../../learn/signs/index.html">The Signs</a>
+                            <a href="../../learn/angles/index.html">Angles & Points</a>
+                            <a href="../../learn/patterns/index.html">Patterns</a>
+                            <a href="../../learn/aspects/index.html">Aspects</a>
+                        </div>
+                        <div class="astro-dropdown-column">
+                            <h4>Personal Placements</h4>
+                            <a href="../../learn/planets/in-signs/sun/aries.html">Planets in Signs</a>
+                            <a href="../../learn/planets/in-houses/sun/house1.html">Planets in Houses</a>
+                            <a href="../../learn/houses/index.html">Signs in Houses</a>
+                            <a href="../../learn/aspects/natal/index.html">Aspect Patterns</a>
+                            <a href="../../learn/critical-degrees/index.html">Critical Degrees</a>
+                        </div>
+                        <div class="astro-dropdown-column">
+                            <h4>Compatibility</h4>
+                            <a href="../../learn/synastry/index.html"
+                                style="color: var(--gold-light); font-weight: 600;">Synastry Guide</a>
+                            <a href="../../learn/synastry/aspects.html">Synastry Aspects</a>
+                            <a href="../../learn/synastry/house-overlays.html">House Overlays</a>
+                            <a href="../../learn/synastry/karma-and-nodes.html">Karma & Nodes</a>
+                            <a href="../../learn/synastry/composite-charts.html">Composite Charts</a>
+                        </div>
+                        <div class="astro-dropdown-column">
+                            <h4>Tools & Services</h4>
+                            <a href="../../tools/chart-calculator.html">Free Natal Chart</a>
+                            <a href="../../tools/horoscopes.html">Daily Horoscopes</a>
+                            <a href="../../tools/synastry.html">Synastry Calculator</a>
+                            <hr style="border: 0; border-top: 1px solid rgba(197,160,89,0.1); margin: 10px 0;">
+                            <a href="../../store/index.html" style="color: var(--gold-light);">Personalized Reports</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="astro-nav-item astro-dropdown">
+                    <a href="../../learn/birthdays/index.html" class="astro-nav-link">Birthdays</a>
+                    <div class="astro-dropdown-menu">
+                        <a href="../../learn/birthdays/january.html">January</a>
+                        <a href="../../learn/birthdays/february.html">February</a>
+                        <a href="../../learn/birthdays/march.html">March</a>
+                        <a href="../../learn/birthdays/april.html">April</a>
+                        <a href="../../learn/birthdays/may.html">May</a>
+                        <a href="../../learn/birthdays/june.html">June</a>
+                        <a href="../../learn/birthdays/july.html">July</a>
+                        <a href="../../learn/birthdays/august.html">August</a>
+                        <a href="../../learn/birthdays/september.html">September</a>
+                        <a href="../../learn/birthdays/october.html">October</a>
+                        <a href="../../learn/birthdays/november.html">November</a>
+                        <a href="../../learn/birthdays/december.html">December</a>
+                    </div>
+                </li>
+                <li class="astro-nav-item astro-dropdown">
+                    <a href="#" class="astro-nav-link">Reports</a>
+                    <div class="astro-dropdown-menu">
+                        <a href="../../tools/chart-calculator.html">Free Natal Chart</a>
+                        <a href="../../tools/horoscopes.html">Horoscopes</a>
+                        <a href="../../tools/synastry.html">Synastry Calculator</a>
+                        <hr style="border: 0; border-top: 1px solid rgba(197,160,89,0.1); margin: 10px 0;">
+                        <a href="../../services/natal-report.html">Natal Report</a>
+                        <a href="../../services/synastry-report.html">Synastry Report</a>
+                        <a href="../../services/healing.html">Healing Sessions</a>
+                        <a href="../../services/consultation.html">1-on-1 Consultation</a>
+                        <a href="../../services/birthday.html">Birthday Interpretation</a>
+                    </div>
+                </li>
+                <li class="astro-nav-item astro-dropdown">
+                    <a href="#" class="astro-nav-link">Reference</a>
+                    <div class="astro-dropdown-menu">
+                        <a href="../../reference/transits.html">Major Transits</a>
+                        <a href="../../reference/resources.html">Resources</a>
+                    </div>
+                </li>
+                <li class="astro-nav-item"><a href="../../blog/index.html" class="astro-nav-link">Blog</a></li>
+                <li class="astro-nav-item"><a href="../../about.html" class="astro-nav-link">About</a></li>
+                <li class="astro-nav-item"><a href="../../store/index.html" class="astro-nav-link">Store</a></li>
+                <li class="astro-nav-item"><a href="../../community/index.html" class="astro-nav-link">Community</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="astro-container py-5">
+        <h1 class="hero-title text-center pt-5">Karma & Nodes</h1>
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="highlight-box">
+                    <h2>Soulmates & Past Lives</h2>
+                    <p>When the Lunar Nodes are involved in synastry, we are looking at something beyond simple
+                        chemistry. These are "Growth Contracts."</p>
+                </div>
+
+                <h3>The Nodes: The Axis of Fate</h3>
+                <p>In synastry, the Lunar Nodes acts as a "magnetic track." When another person's personal planets
+                    aspect your Nodes, you are physically and spiritually pulled into their orbit.</p>
+
+                <div class="row mt-4">
+                    <div class="col-md-6">
+                        <div class="content-card"
+                            style="background: rgba(197, 160, 89, 0.05); padding: 1.5rem; border-radius: 8px; border: 1px solid rgba(197, 160, 89, 0.2); height: 100%;">
+                            <h4>The South Node: Past Life Ties</h4>
+                            <p>Activation of the South Node feels like instant safety. You "know" this person. There is
+                                an immediate language between you. However, these relationships can be
+                                <strong>draining</strong> if the couple stays stuck in the South Node. These
+                                are often relationships from the past that have come back for one final
+                                lesson or to "settle a debt."
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="content-card"
+                            style="background: rgba(46, 204, 113, 0.05); padding: 1.5rem; border-radius: 8px; border: 1px solid rgba(46, 204, 113, 0.2); height: 100%;">
+                            <h4>The North Node: Future Bound</h4>
+                            <p>One person's planet on another's North Node pulls them toward their
+                                <strong>evolution</strong>. It is often uncomfortable, as it forces you into
+                                new behaviors, but it is deeply fulfilling. This is the hallmark of a
+                                partner who makes you a "better person" by challenging your status quo.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <h3 class="mt-5">The Vertex: Fated Encounters</h3>
+                <p>The Vertex is often called the "Third Angle" of the chart. It is an auxiliary Descendant that acts
+                    as a <strong>point of destiny</strong>. When your partner’s planet (especially Sun, Moon, or
+                    Venus) is exactly conjunct your Vertex, you may feel that your life has reached a "Before and
+                    After" milestone. These connections are nearly impossible to avoid; the universe simply
+                    conspires to bring you together.</p>
+
+                <h3 class="mt-5">Karmic Asteroids: Eros & Psyche</h3>
+                <p>Beyond the planets, several asteroids play a vital role in deep-soul connections:</p>
+                <ul>
+                    <li><strong>Asteroid Psyche (1632):</strong> Represents the soul's journey and psychological
+                        vulnerability. When Psyche is hit in synastry, there is a "telepathic" or intuitive
+                        link.</li>
+                    <li><strong>Asteroid Eros (433):</strong> Represents the erotic and passionate drive. Eros-Mars
+                        aspects are the signature of a "wild," primal attraction.</li>
+                    <li><strong>Asteroid Karma (3811):</strong> Often highlights exactly where the past-life link
+                        is located. In the 4th house, it may be a family link; in the 10th, a professional
+                        legacy.</li>
+                </ul>
+
+                <div class="alert alert-warning mt-5"
+                    style="background: rgba(197, 160, 89, 0.1); border: 1px solid var(--gold-primary); color: var(--white-soft);">
+                    <p class="mb-0"><strong>A Note on "Karmic":</strong> Not all karmic relationships are meant to
+                        last forever. Some are <strong>"contracts of completion"</strong>—they exist to help you
+                        resolve a specific pattern so you can move forward more freely.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
